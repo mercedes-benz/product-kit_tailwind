@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../dist/output.css" rel="stylesheet">
+  <script>
+    var nightwind = {
+      beforeTransition: () => {
+        const doc = document.documentElement;
+        const onTransitionDone = () => {
+          doc.classList.remove('nightwind');
+          doc.removeEventListener('transitionend', onTransitionDone);
+        }
+        doc.addEventListener('transitionend', onTransitionDone);
+        if (!doc.classList.contains('nightwind')) {
+          doc.classList.add('nightwind');
+        }
+      },
+    
+      toggle: () => {
+        console.log('nightwind toogle')
+        nightwind.beforeTransition();
+        if (!document.documentElement.classList.contains('dark')) {
+          document.documentElement.classList.add('dark');
+          window.localStorage.setItem('nightwind-mode', 'dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+            window.localStorage.setItem('nightwind-mode', 'light');
+        }
+      },
+    
+      enable: (dark) => {
+        const mode = dark ? "dark" : "light";
+        const opposite = dark ? "light" : "dark";
+    
+        nightwind.beforeTransition();
+    
+        if (document.documentElement.classList.contains(opposite)) {
+          document.documentElement.classList.remove(opposite);
+        }
+        document.documentElement.classList.add(mode);
+        window.localStorage.setItem('nightwind-mode', mode);
+      },
+     }
+    </script>
+    <script>
+    (function() {
+      function getInitialColorMode() {
+              const persistedColorPreference = window.localStorage.getItem('nightwind-mode');
+              const hasPersistedPreference = typeof persistedColorPreference === 'string';
+              if (hasPersistedPreference) {
+                return persistedColorPreference;
+              }
+              const mql = window.matchMedia('(prefers-color-scheme: dark)');
+              const hasMediaQueryPreference = typeof mql.matches === 'boolean';
+              if (hasMediaQueryPreference) {
+                return mql.matches ? 'dark' : 'light';
+              }
+              return 'light';
+      }
+      getInitialColorMode() == 'light' ? document.documentElement.classList.remove('dark') : document.documentElement.classList.add('dark');
+    })()
+    </script>
+</head>
+<body class="bg-white">
+
+  <button class="toggle btn text-black border-2 rounded border-outline m-2 px-2 py-1" onclick="nightwind.toggle()">
+    toogle
+  </button>
+
+  <div class="bg-primary hover:bg-secondary p-6 p-sm-2">
+    Primary
+  </div>
+
+  <div class="bg-contrast-quaternary hover:bg-secondary p-6 p-sm-2">
+    Primary
+  </div>
+
+  <div class="bg-secondary hover:bg-primary p-6">
+    Secondary
+  </div>
+
+  <div class="bg-contrast-surface hover:bg-primary p-6">
+    Secondary
+  </div>
+
+  <div class="bg-gradient-to-r from-primary via-secondary to-tertiary p-6"></div>
+  <div class="grid grid-cols-3 divide-x divide-primary text-black">
+    <div>01</div>
+    <div>02</div>
+    <div>03</div>
+  </div>
+
+<h2>SPACING</h2>
+
+  <div class="grid grid-cols-3 divide-x divide-primary text-black">
+    <div class="m-m p-2 bg-secondary">01</div>
+    <div class="m-m p-2 bg-secondary">02</div>
+    <div class="m-m p-2 bg-secondary">03</div>
+  </div>
+</body>
+</html>
