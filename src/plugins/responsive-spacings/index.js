@@ -67,7 +67,6 @@ const responsiveSpacings = plugin(
     
     addComponents(classes)
     console.log('classes', classes)
-
   }
 );
 
