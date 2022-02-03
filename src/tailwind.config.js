@@ -1,5 +1,3 @@
-const autoprefixer = require('autoprefixer')
-
 const brandColors = {
   white: '#fff',
   black: '#000',
@@ -133,6 +131,8 @@ module.exports = {
     },
     spacing: {
       ...brandSpacing,
+    },
+    responsiveSpacing: {
       xs: {
         '3xs': brandSpacing['0.5'],
         xxs: brandSpacing['1'],

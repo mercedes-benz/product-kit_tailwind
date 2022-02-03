@@ -1,11 +1,15 @@
 {
   "name": "product-kit_tailwind",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "src/tailwind.config.js",
   "license": "MIT",
   "devDependencies": {
     "autoprefixer": "^10.4.2",
     "postcss": "^8.4.5",
+    "postcss-import": "^14.0.2",
     "tailwindcss": "^3.0.15"
+  },
+  "dependencies": {
+    "@daimler/productkit-core": "^1.0.7"
   }
 }

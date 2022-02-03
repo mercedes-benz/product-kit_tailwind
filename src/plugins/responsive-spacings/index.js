@@ -2,7 +2,7 @@ const plugin = require("tailwindcss/plugin")
 
 const responsiveSpacings = plugin(
   function ({ addComponents, addUtilities, theme, e, prefix, config }) {
-    const spacings = theme("spacing");
+    const spacings = theme("responsiveSpacing");
     const prefixes = ['m','mx','my','mt','mb','ml','mr','p','px','py','pt','pb','pr','pl','gap','gap-x','gap-y'];
     const classes = [];
     const properties = {
@@ -43,12 +43,12 @@ const responsiveSpacings = plugin(
             }
           }
         }
-      }
-      
-      return {
-        [`@media (min-width: ${theme("screens." + layout)})`]: {
-          [`${className}`] : {
-            [`${property}`] : space
+      } else {
+        return {
+          [`@media (min-width: ${theme("screens." + layout)})`]: {
+            [`${className}`] : {
+              [`${property}`] : space
+            }
           }
         }
       }
@@ -59,6 +59,7 @@ const responsiveSpacings = plugin(
         const layout = spacing;
         Object.entries(value).forEach(([breakpoint, space]) => {
           prefixes.forEach((prefix) => {
+            console.log(prefix, breakpoint, layout, space)
             classes.push(generateClass(prefix, breakpoint, layout, space))
           })
         })
