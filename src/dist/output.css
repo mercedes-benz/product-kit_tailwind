@@ -1154,49 +1154,47 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-color: #b9c3d1;
 }
 
-@media (min-width: 0px) {
-  .m-m {
-    margin: 32px;
-  }
+.m-m {
+  margin: 32px;
+}
 
-  .mx-m {
-    margin-left: 32px;
-    margin-right: 32px;
-  }
+.mx-m {
+  margin-left: 32px;
+  margin-right: 32px;
+}
 
-  .my-m {
-    margin-top: 32px;
-    margin-bottom: 32px;
-  }
+.my-m {
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
 
-  .mt-m {
-    margin-top: 32px;
-  }
+.mt-m {
+  margin-top: 32px;
+}
 
-  .mb-m {
-    margin-bottom: 32px;
-  }
+.mb-m {
+  margin-bottom: 32px;
+}
 
-  .ml-m {
-    margin-left: 32px;
-  }
+.ml-m {
+  margin-left: 32px;
+}
 
-  .mr-m {
-    margin-right: 32px;
-  }
+.mr-m {
+  margin-right: 32px;
+}
 
-  .gap-m {
-    gap: 32px;
-  }
+.gap-m {
+  gap: 32px;
+}
 
-  .gap-x-m {
-    -moz-column-gap: 32px;
-         column-gap: 32px;
-  }
+.gap-x-m {
+  -moz-column-gap: 32px;
+       column-gap: 32px;
+}
 
-  .gap-y-m {
-    row-gap: 32px;
-  }
+.gap-y-m {
+  row-gap: 32px;
 }
 
 @media (min-width: 600px) {

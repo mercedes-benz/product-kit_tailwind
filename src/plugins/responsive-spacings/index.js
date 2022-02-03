@@ -35,6 +35,13 @@ const responsiveSpacings = plugin(
         property.forEach((prop) => {
             arrayPropery = {...arrayPropery, [`${prop}`] : space}
         });
+        if (theme("screens." + layout) === '0px') {
+          return {
+            [`${className}`] : {
+              ...arrayPropery
+            }
+          }
+        }
 
         return {
           [`@media (min-width: ${theme("screens." + layout)})`]: {
@@ -44,6 +51,15 @@ const responsiveSpacings = plugin(
           }
         }
       } else {
+
+        if (theme("screens." + layout) === '0px') {
+          return {
+            [`${className}`] : {
+              [`${property}`] : space
+            }
+          }
+        }
+
         return {
           [`@media (min-width: ${theme("screens." + layout)})`]: {
             [`${className}`] : {
