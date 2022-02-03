@@ -1158,17 +1158,134 @@ Ensure the default browser behavior of the `hidden` attribute.
   .m-m {
     margin: 32px;
   }
+
+  .mx-m {
+    margin-left: 32px;
+    margin-right: 32px;
+  }
+
+  .my-m {
+    margin-top: 32px;
+    margin-bottom: 32px;
+  }
+
+  .mt-m {
+    margin-top: 32px;
+  }
+
+  .mb-m {
+    margin-bottom: 32px;
+  }
+
+  .ml-m {
+    margin-left: 32px;
+  }
+
+  .mr-m {
+    margin-right: 32px;
+  }
+
+  .gap-m {
+    gap: 32px;
+  }
+
+  .gap-x-m {
+    -moz-column-gap: 32px;
+         column-gap: 32px;
+  }
+
+  .gap-y-m {
+    row-gap: 32px;
+  }
 }
 
 @media (min-width: 600px) {
   .m-m {
     margin: 32px;
   }
+
+  .mx-m {
+    margin-left: 32px;
+    margin-right: 32px;
+  }
+
+  .my-m {
+    margin-top: 32px;
+    margin-bottom: 32px;
+  }
+
+  .mt-m {
+    margin-top: 32px;
+  }
+
+  .mb-m {
+    margin-bottom: 32px;
+  }
+
+  .ml-m {
+    margin-left: 32px;
+  }
+
+  .mr-m {
+    margin-right: 32px;
+  }
+
+  .gap-m {
+    gap: 32px;
+  }
+
+  .gap-x-m {
+    -moz-column-gap: 32px;
+         column-gap: 32px;
+  }
+
+  .gap-y-m {
+    row-gap: 32px;
+  }
 }
 
 @media (min-width: 905px) {
   .m-m {
     margin: 48px;
+  }
+
+  .mx-m {
+    margin-left: 48px;
+    margin-right: 48px;
+  }
+
+  .my-m {
+    margin-top: 48px;
+    margin-bottom: 48px;
+  }
+
+  .mt-m {
+    margin-top: 48px;
+  }
+
+  .mb-m {
+    margin-bottom: 48px;
+  }
+
+  .ml-m {
+    margin-left: 48px;
+  }
+
+  .mr-m {
+    margin-right: 48px;
+  }
+
+  .gap-m {
+    gap: 48px;
+  }
+
+  .gap-x-m {
+    -moz-column-gap: 48px;
+         column-gap: 48px;
+  }
+
+  .gap-y-m {
+    row-gap: 48px;
   }
 }
 
@@ -1179,12 +1296,108 @@ Ensure the default browser behavior of the `hidden` attribute.
 .m-m margin {
   3xs: 4px;
   xxs: 8px;
-  xs: 24px;
+  xs: 16px;
   s: 32px;
   m: 48px;
   l: 64px;
   xl: 80px;
-  xxl: 88;
+  xxl: 88px;
+  3xl: 128px;
+}
+
+.mx-m margin-left {
+  3xs: 4px;
+  xxs: 8px;
+  xs: 16px;
+  s: 32px;
+  m: 48px;
+  l: 64px;
+  xl: 80px;
+  xxl: 88px;
+  3xl: 128px;
+}
+
+.mx-m margin-right {
+  3xs: 4px;
+  xxs: 8px;
+  xs: 16px;
+  s: 32px;
+  m: 48px;
+  l: 64px;
+  xl: 80px;
+  xxl: 88px;
+  3xl: 128px;
+}
+
+.my-m margin-top {
+  3xs: 4px;
+  xxs: 8px;
+  xs: 16px;
+  s: 32px;
+  m: 48px;
+  l: 64px;
+  xl: 80px;
+  xxl: 88px;
+  3xl: 128px;
+}
+
+.my-m margin-bottom {
+  3xs: 4px;
+  xxs: 8px;
+  xs: 16px;
+  s: 32px;
+  m: 48px;
+  l: 64px;
+  xl: 80px;
+  xxl: 88px;
+  3xl: 128px;
+}
+
+.mt-m margin-top {
+  3xs: 4px;
+  xxs: 8px;
+  xs: 16px;
+  s: 32px;
+  m: 48px;
+  l: 64px;
+  xl: 80px;
+  xxl: 88px;
+  3xl: 128px;
+}
+
+.mb-m margin-bottom {
+  3xs: 4px;
+  xxs: 8px;
+  xs: 16px;
+  s: 32px;
+  m: 48px;
+  l: 64px;
+  xl: 80px;
+  xxl: 88px;
+  3xl: 128px;
+}
+
+.mr-m margin-right {
+  3xs: 4px;
+  xxs: 8px;
+  xs: 16px;
+  s: 32px;
+  m: 48px;
+  l: 64px;
+  xl: 80px;
+  xxl: 88px;
+  3xl: 128px;
+}
+
+.ml-m margin-left {
+  3xs: 4px;
+  xxs: 8px;
+  xs: 16px;
+  s: 32px;
+  m: 48px;
+  l: 64px;
+  xl: 80px;
+  xxl: 88px;
   3xl: 128px;
 }
 
@@ -1194,6 +1407,50 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .grid-cols-3 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.grid-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.gap-m gap {
+  3xs: 4px;
+  xxs: 8px;
+  xs: 16px;
+  s: 32px;
+  m: 48px;
+  l: 64px;
+  xl: 80px;
+  xxl: 88px;
+  3xl: 128px;
+}
+
+.gap-y-m rowGap {
+  3xs: 4px;
+  xxs: 8px;
+  xs: 16px;
+  s: 32px;
+  m: 48px;
+  l: 64px;
+  xl: 80px;
+  xxl: 88px;
+  3xl: 128px;
+}
+
+.gap-x-m columnGap {
+  3xs: 4px;
+  xxs: 8px;
+  xs: 16px;
+  s: 32px;
+  m: 48px;
+  l: 64px;
+  xl: 80px;
+  xxl: 88px;
+  3xl: 128px;
 }
 
 .divide-x > :not([hidden]) ~ :not([hidden]) {

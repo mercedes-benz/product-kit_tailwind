@@ -101,6 +101,23 @@ const brandColors = {
   }
 }
 
+const brandSpacing = {
+  '0': '0px',
+  '0.5': '4px',
+  '1': '8px',
+  '2': '16px',
+  '3': '24px',
+  '4': '32px',
+  '6': '48px',
+  '8': '64px',
+  '9': '72px',
+  '10': '80px',
+  '11': '88px',
+  '12': '96px',
+  '16': '128px',
+  '24': '192px',
+}
+
 module.exports = {
   darkMode: 'class',
   content: [
@@ -115,53 +132,40 @@ module.exports = {
       xl: '1440px',
     },
     spacing: {
+      ...brandSpacing,
       xs: {
-        '3xs': '4px',
-        xxs: '8px',
-        xs: '16px',
-        s: '24px',
-        m: '32px',
-        l: '48px',
-        xl: '64px',
-        xxl: '80px',
-        '3xl': '88px'
+        '3xs': brandSpacing['0.5'],
+        xxs: brandSpacing['1'],
+        xs: brandSpacing['2'],
+        s: brandSpacing['3'],
+        m: brandSpacing['4'],
+        l: brandSpacing['6'],
+        xl: brandSpacing['8'],
+        xxl: brandSpacing['10'],
+        '3xl': brandSpacing['11']
       },
       s: {
-        '3xs': '4px',
-        xxs: '8px',
-        xs: '16px',
-        s: '24px',
-        m: '32px',
-        l: '48px',
-        xl: '64px',
-        xxl: '80px',
-        '3xl': '88px'
+        '3xs': brandSpacing['0.5'],
+        xxs: brandSpacing['1'],
+        xs: brandSpacing['2'],
+        s: brandSpacing['3'],
+        m: brandSpacing['4'],
+        l: brandSpacing['6'],
+        xl: brandSpacing['8'],
+        xxl: brandSpacing['10'],
+        '3xl': brandSpacing['11']
       },
       m: {
-        '3xs': spacing['0.5'],
-        xxs: '8px',
-        xs: '24px',
-        s: '32px',
-        m: spacing['6'],
-        l: '64px',
-        xl: '80px',
-        xxl: '88',
-        '3xl': '128px'
-      },
-      '0': '0px',
-      '0.5': '4px',
-      '1': '8px',
-      '2': '16px',
-      '3': '24px',
-      '4': '32px',
-      '6': '48px',
-      '8': '64px',
-      '9': '72px',
-      '10': '80px',
-      '11': '88px',
-      '12': '96px',
-      '16': '128px',
-      '24': '192px',
+        '3xs': brandSpacing['0.5'],
+        xxs: brandSpacing['1'],
+        xs: brandSpacing['2'],
+        s: brandSpacing['4'],
+        m: brandSpacing['6'],
+        l: brandSpacing['8'],
+        xl: brandSpacing['10'],
+        xxl: brandSpacing['11'],
+        '3xl': brandSpacing['16']
+      }
     },
     fontFamily: {
       sans: ['"Source Sans Pro"', 'sans-serif'],

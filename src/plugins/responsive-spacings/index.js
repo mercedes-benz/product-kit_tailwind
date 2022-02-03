@@ -3,20 +3,47 @@ const plugin = require("tailwindcss/plugin")
 const responsiveSpacings = plugin(
   function ({ addComponents, addUtilities, theme, e, prefix, config }) {
     const spacings = theme("spacing");
-    const prefixes = ['m', 'p', 'gap'];
+    const prefixes = ['m','mx','my','mt','mb','ml','mr','p','px','py','pt','pb','pr','pl','gap','gap-x','gap-y'];
     const classes = [];
     const properties = {
       'm': 'margin',
+      'mx': ['margin-left', 'margin-right'],
+      'my': ['margin-top', 'margin-bottom'],
+      'mt': 'margin-top',
+      'mb': 'margin-bottom',
+      'mr': 'margin-right',
+      'ml': 'margin-left',
       'p': 'padding',
-      'border': 'border-width'
+      'px': ['padding-left', 'padding-right'],
+      'py': ['padding-top', 'padding-bottom'],
+      'pt': 'padding-top',
+      'pb': 'padding-bottom',
+      'pr': 'padding-right',
+      'pl': 'padding-left',
+      'gap': 'gap',
+      'gap-x': 'column-gap',
+      'gap-y': 'row-gap'
     }
-
-    console.log(e, prefix);
-
 
     const generateClass = (prefix, breakpoint, layout, space) => {
       const className = `.${prefix}-${breakpoint}`
       const property = properties[prefix];
+      
+      if (Array.isArray(property)) {
+        let arrayPropery = {};
+
+        property.forEach((prop) => {
+            arrayPropery = {...arrayPropery, [`${prop}`] : space}
+        });
+
+        return {
+          [`@media (min-width: ${theme("screens." + layout)})`]: {
+            [`${className}`] : {
+              ...arrayPropery
+            }
+          }
+        }
+      }
       
       return {
         [`@media (min-width: ${theme("screens." + layout)})`]: {
@@ -29,10 +56,8 @@ const responsiveSpacings = plugin(
 
     Object.entries(spacings).forEach(([spacing, value]) => {
       if (typeof value === 'object') {
-        console.log(spacing, value)
         const layout = spacing;
         Object.entries(value).forEach(([breakpoint, space]) => {
-          console.log('breakpoint_' + layout, breakpoint, space);
           prefixes.forEach((prefix) => {
             classes.push(generateClass(prefix, breakpoint, layout, space))
           })
