@@ -1,3 +1,5 @@
+@import '@daimler/productkit-core/exports/web/styles/css/variables.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

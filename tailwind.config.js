@@ -1,3 +1,4 @@
+
 const brandColors = {
   white: '#fff',
   black: '#000',
@@ -303,8 +304,8 @@ module.exports = {
     container: false
   },
   plugins: [
-    require('./plugins/darkmode'),
-    require('./plugins/responsive-spacings'),
+    require('./src/plugins/darkmode'),
+    require('./src/plugins/responsive-spacings'),
     {
       theme: {
         extend: {
