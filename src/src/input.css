@@ -1,4 +1,5 @@
 @import '@daimler/productkit-core/exports/web/styles/css/variables.css';
+@import '@daimler/productkit-core/exports/web/styles/css/variables-dark.css';
 
 @tailwind base;
 @tailwind components;
