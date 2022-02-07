@@ -5,28 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="../dist/output.css" rel="stylesheet">
   <script>
-    var nightwind = {
-      beforeTransition: () => {
-        const doc = document.documentElement;
-        const onTransitionDone = () => {
-          doc.classList.remove('nightwind');
-          doc.removeEventListener('transitionend', onTransitionDone);
-        }
-        doc.addEventListener('transitionend', onTransitionDone);
-        if (!doc.classList.contains('nightwind')) {
-          doc.classList.add('nightwind');
-        }
-      },
-    
+    var darkMode = {
       toggle: () => {
-        console.log('nightwind toogle')
-        nightwind.beforeTransition();
         if (!document.documentElement.classList.contains('dark')) {
           document.documentElement.classList.add('dark');
-          window.localStorage.setItem('nightwind-mode', 'dark');
         } else {
             document.documentElement.classList.remove('dark');
-            window.localStorage.setItem('nightwind-mode', 'light');
         }
       },
     
@@ -40,7 +24,6 @@
           document.documentElement.classList.remove(opposite);
         }
         document.documentElement.classList.add(mode);
-        window.localStorage.setItem('nightwind-mode', mode);
       },
      }
     </script>
@@ -63,11 +46,15 @@
     })()
     </script>
 </head>
-<body class="bg-white">
+<body class="bg-background text-contrast-background">
 
-  <button class="toggle btn text-black border-2 rounded border-outline m-2 px-2 py-1" onclick="nightwind.toggle()">
+  <button class="toggle btn text-black border-2 rounded border-outline m-2 px-2 py-1" onclick="darkMode.toggle()">
     toogle
   </button>
+
+  <div class="bg-test p-6 p-sm-2">
+    Primary
+  </div>
 
   <div class="bg-primary hover:bg-secondary p-6 p-sm-2">
     Primary
