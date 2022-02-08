@@ -907,7 +907,7 @@
   --color-white: #000;
 }
 
-/*! tailwindcss v3.0.18 | MIT License | https://tailwindcss.com
+/*! tailwindcss v3.0.19 | MIT License | https://tailwindcss.com
  */
 
 /*
@@ -942,7 +942,7 @@ html {
   -moz-tab-size: 4; /* 3 */
   -o-tab-size: 4;
      tab-size: 4; /* 3 */
-  font-family: "Source Sans Pro", sans-serif; /* 4 */
+  font-family: var(--font-family-brand), sans-serif; /* 4 */
 }
 
 /*
@@ -1017,7 +1017,7 @@ code,
 kbd,
 samp,
 pre {
-  font-family: "Source Code Pro", sans-serif; /* 1 */
+  font-family: var(--font-family-monospace), sans-serif; /* 1 */
   font-size: 1em; /* 2 */
 }
 
@@ -1336,50 +1336,53 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-backdrop-sepia:  ;
 }
 
-.m-m {
-  margin: var(--size-application-spacing-xs-m);
+@media (min-width: var(--size-screen-xs)) {
+
+  .m-m {
+    margin: var(--size-application-spacing-xs-m);
+  }
+
+  .mx-m {
+    margin-left: var(--size-application-spacing-xs-m);
+    margin-right: var(--size-application-spacing-xs-m);
+  }
+
+  .my-m {
+    margin-top: var(--size-application-spacing-xs-m);
+    margin-bottom: var(--size-application-spacing-xs-m);
+  }
+
+  .mt-m {
+    margin-top: var(--size-application-spacing-xs-m);
+  }
+
+  .mb-m {
+    margin-bottom: var(--size-application-spacing-xs-m);
+  }
+
+  .ml-m {
+    margin-left: var(--size-application-spacing-xs-m);
+  }
+
+  .mr-m {
+    margin-right: var(--size-application-spacing-xs-m);
+  }
+
+  .gap-m {
+    gap: var(--size-application-spacing-xs-m);
+  }
+
+  .gap-x-m {
+    -moz-column-gap: var(--size-application-spacing-xs-m);
+         column-gap: var(--size-application-spacing-xs-m);
+  }
+
+  .gap-y-m {
+    row-gap: var(--size-application-spacing-xs-m);
+  }
 }
 
-.mx-m {
-  margin-left: var(--size-application-spacing-xs-m);
-  margin-right: var(--size-application-spacing-xs-m);
-}
-
-.my-m {
-  margin-top: var(--size-application-spacing-xs-m);
-  margin-bottom: var(--size-application-spacing-xs-m);
-}
-
-.mt-m {
-  margin-top: var(--size-application-spacing-xs-m);
-}
-
-.mb-m {
-  margin-bottom: var(--size-application-spacing-xs-m);
-}
-
-.ml-m {
-  margin-left: var(--size-application-spacing-xs-m);
-}
-
-.mr-m {
-  margin-right: var(--size-application-spacing-xs-m);
-}
-
-.gap-m {
-  gap: var(--size-application-spacing-xs-m);
-}
-
-.gap-x-m {
-  -moz-column-gap: var(--size-application-spacing-xs-m);
-       column-gap: var(--size-application-spacing-xs-m);
-}
-
-.gap-y-m {
-  row-gap: var(--size-application-spacing-xs-m);
-}
-
-@media (min-width: 600px) {
+@media (min-width: var(--size-screen-s)) {
 
   .m-m {
     margin: var(--size-application-spacing-s-m);
@@ -1425,7 +1428,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   }
 }
 
-@media (min-width: 905px) {
+@media (min-width: var(--size-screen-m)) {
 
   .m-m {
     margin: var(--size-application-spacing-m-m);
@@ -1471,7 +1474,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   }
 }
 
-@media (min-width: 1240px) {
+@media (min-width: var(--size-screen-l)) {
 
   .m-m {
     margin: var(--size-application-spacing-l-m);
@@ -1517,7 +1520,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: var(--size-screen-xl)) {
 
   .m-m {
     margin: var(--size-application-spacing-xl-m);
@@ -1605,8 +1608,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-color: var(--color-application-outline);
 }
 
-.bg-white {
-  background-color: var(--color-white);
+.bg-background {
+  background-color: var(--color-application-background);
 }
 
 .bg-primary {
@@ -1623,10 +1626,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .bg-contrast-surface {
   background-color: var(--color-application-contrast-surface);
-}
-
-.bg-background {
-  background-color: var(--color-application-background);
 }
 
 .bg-gradient-to-r {
@@ -1664,12 +1663,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-bottom: var(--size-space-1x);
 }
 
-.text-black {
-  color: var(--color-black);
-}
-
 .text-contrast-background {
   color: var(--color-application-contrast-background);
+}
+
+.text-black {
+  color: var(--color-black);
 }
 
 .hover\:bg-secondary:hover {
