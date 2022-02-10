@@ -1,9 +1,11 @@
+<!-- SPDX-License-Identifier: MIT -->
+<!-- © Daimler TSS GmbH -->
 <!doctype html>
 <html>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="../dist/output.css" rel="stylesheet">
+  <link href="../dist/main.css" rel="stylesheet">
   <script>
     var darkMode = {
       toggle: () => {
@@ -13,47 +15,17 @@
             document.documentElement.classList.remove('dark');
         }
       },
-    
-      enable: (dark) => {
-        const mode = dark ? "dark" : "light";
-        const opposite = dark ? "light" : "dark";
-    
-        nightwind.beforeTransition();
-    
-        if (document.documentElement.classList.contains(opposite)) {
-          document.documentElement.classList.remove(opposite);
-        }
-        document.documentElement.classList.add(mode);
-      },
      }
-    </script>
-    <script>
-    (function() {
-      function getInitialColorMode() {
-              const persistedColorPreference = window.localStorage.getItem('nightwind-mode');
-              const hasPersistedPreference = typeof persistedColorPreference === 'string';
-              if (hasPersistedPreference) {
-                return persistedColorPreference;
-              }
-              const mql = window.matchMedia('(prefers-color-scheme: dark)');
-              const hasMediaQueryPreference = typeof mql.matches === 'boolean';
-              if (hasMediaQueryPreference) {
-                return mql.matches ? 'dark' : 'light';
-              }
-              return 'light';
-      }
-      getInitialColorMode() == 'light' ? document.documentElement.classList.remove('dark') : document.documentElement.classList.add('dark');
-    })()
     </script>
 </head>
 <body class="bg-background text-contrast-background">
 
-  <button class="toggle btn text-black border-2 rounded border-outline m-2 px-2 py-1" onclick="darkMode.toggle()">
-    toogle
+  <button class="toggle text-primary border-2 rounded border-outline m-2 px-2 py-1" onclick="darkMode.toggle()">
+    toggle light/dark mode
   </button>
 
-  <div class="bg-test p-6 p-sm-2">
-    Primary
+  <div class="bg-background p-6 p-sm-2">
+    Background
   </div>
 
   <div class="bg-primary hover:bg-secondary p-6 p-sm-2">

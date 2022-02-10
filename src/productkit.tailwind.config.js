@@ -1,7 +1,8 @@
-
+// SPDX-License-Identifier: MIT
+// © Daimler TSS GmbH
 const brandColors = {
-  white: "var(--color-white)",
-  black: "var(--color-black)",
+  white: 'var(--color-brand-neutral-white)',
+  black: 'var(--color-brand-neutral-black)',
   neutral: {
     50: 'var(--color-brand-neutral-50)',
     100: 'var(--color-brand-neutral-100)',
@@ -119,9 +120,7 @@ const brandSpacing = {
 
 module.exports = {
   darkMode: 'class',
-  content: [
-    './src/**/*.{html,js}',
-  ],
+  content: ['./src/**/*.{html,js}'],
   theme: {
     screens: {
       xs: 'var(--size-screen-xs)',
@@ -236,30 +235,30 @@ module.exports = {
       '4xl': 'var(--size-letter-spacing-4xl)',
     },
     opacity: {
-      '38': 'var(--opacity-brand-1)',
-      '60': 'var(--opacity-brand-2)',
-      '74': 'var(--opacity-brand-3)',
-      '87': 'var(--opacity-brand-4)',
+      '1': 'var(--opacity-brand-1)',
+      '2': 'var(--opacity-brand-2)',
+      '3': 'var(--opacity-brand-3)',
+      '4': 'var(--opacity-brand-4)',
     },
     colors: {
       ...brandColors,
-      primary: "var(--color-application-primary)",
-      secondary: "var(--color-application-secondary)",
-      tertiary: "var(--color-application-tertiary)",
-      quaternary: "var(--color-application-quaternary)",
-      background: "var(--color-application-background)",
-      surface: "var(--color-application-surface)",
-      error: "var(--color-application-error)",
-      outline: "var(--color-application-outline)",
+      primary: 'var(--color-application-primary)',
+      secondary: 'var(--color-application-secondary)',
+      tertiary: 'var(--color-application-tertiary)',
+      quaternary: 'var(--color-application-quaternary)',
+      background: 'var(--color-application-background)',
+      surface: 'var(--color-application-surface)',
+      error: 'var(--color-application-error)',
+      outline: 'var(--color-application-outline)',
       contrast: {
-        primary: "var(--color-application-contrast-primary)",
-        secondary: "var(--color-application-contrast-secondary)",
-        tertiary: "var(--color-application-contrast-tertiary)",
-        quaternary: "var(--color-application-contrast-quaternary)",
-        background: "var(--color-application-contrast-background)",
-        surface: "var(--color-application-contrast-surface)",
-        error: "var(--color-application-contrast-error)",
-        outline: "var(--color-application-contrast-outline)",
+        primary: 'var(--color-application-contrast-primary)',
+        secondary: 'var(--color-application-contrast-secondary)',
+        tertiary: 'var(--color-application-contrast-tertiary)',
+        quaternary: 'var(--color-application-contrast-quaternary)',
+        background: 'var(--color-application-contrast-background)',
+        surface: 'var(--color-application-contrast-surface)',
+        error: 'var(--color-application-contrast-error)',
+        outline: 'var(--color-application-contrast-outline)',
       },
     },
     extend: {},
@@ -268,16 +267,7 @@ module.exports = {
     container: false
   },
   plugins: [
-    require('./src/plugins/responsive-spacings'),
-    {
-      theme: {
-        extend: {
-          transitionDuration: {
-            0: "0ms",
-          },
-        },
-      },
-    },
+    require('./plugins/responsive-spacings'),
     function ({ addComponents, theme }) {
       addComponents({
         '.container': {
@@ -287,37 +277,37 @@ module.exports = {
           display: 'grid',
           '@screen xs': {
             maxWidth: '100%',
-            paddingLeft: '16px',
-            paddingRight: '16px',
-            columnGap: '16px',
+            paddingLeft: theme('spacing.2'),
+            paddingRight: theme('spacing.2'),
+            columnGap: theme('spacing.2'),
             gridTemplateColumns: 'repeat(4, minmax(0, 1fr))'
           },
           '@screen s': {
             maxWidth: '100%',
-            paddingLeft: '32px',
-            paddingRight: '32px',
-            columnGap: '16px',
+            paddingLeft: theme('spacing.4'),
+            paddingRight: theme('spacing.4'),
+            columnGap: theme('spacing.2'),
             gridTemplateColumns: 'repeat(8, minmax(0, 1fr))'
           },
           '@screen m': {
-            maxWidth: '840px',
-            paddingLeft: '0px',
-            paddingRight: '0px',
-            columnGap: '24px',
+            maxWidth: 'var(--layout-application-m-body-max-size)',
+            paddingLeft: theme('spacing.0'),
+            paddingRight: theme('spacing.0'),
+            columnGap: theme('spacing.3'),
             gridTemplateColumns: 'repeat(12, minmax(0, 1fr))'
           },
           '@screen l': {
             maxWidth: '100%',
-            paddingLeft: '192px',
-            paddingRight: '192px',
-            columnGap: '24px',
+            paddingLeft: theme('spacing.24'),
+            paddingRight: theme('spacing.24'),
+            columnGap: theme('spacing.3'),
             gridTemplateColumns: 'repeat(12, minmax(0, 1fr))'
           },
           '@screen xl': {
-            maxWidth: '1040px',
-            paddingLeft: '0px',
-            paddingRight: '0px',
-            columnGap: '24px',
+            maxWidth: 'var(--layout-application-xl-body-max-size)',
+            paddingLeft: theme('spacing.0'),
+            paddingRight: theme('spacing.0'),
+            columnGap: theme('spacing.3'),
             gridTemplateColumns: 'repeat(12, minmax(0, 1fr))'
           },
         },
@@ -451,6 +441,7 @@ module.exports = {
           letterSpacing: theme('letterSpacing.4xl'),
           textTransform: 'uppercase',
           fontWeight: theme('fontWeight.bold'),
+          color: theme('colors.secondary'),
           '@screen m': {
             fontSize: theme('fontSize.3xs'),
             lineHeight: theme('lineHeight.xxs'),

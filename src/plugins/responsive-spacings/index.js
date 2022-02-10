@@ -1,8 +1,10 @@
-const plugin = require("tailwindcss/plugin")
+// SPDX-License-Identifier: MIT
+// © Daimler TSS GmbH
+const plugin = require('tailwindcss/plugin')
 
 const responsiveSpacings = plugin(
   function ({ addComponents, addUtilities, theme, e, prefix, config }) {
-    const spacings = theme("responsiveSpacing");
+    const spacings = theme('responsiveSpacing');
     const prefixes = ['m','mx','my','mt','mb','ml','mr','p','px','py','pt','pb','pr','pl','gap','gap-x','gap-y'];
     const classes = [];
     const properties = {
@@ -35,7 +37,7 @@ const responsiveSpacings = plugin(
         property.forEach((prop) => {
             arrayPropery = {...arrayPropery, [`${prop}`] : space}
         });
-        if (theme("screens." + layout) === '0px') {
+        if (theme('screens.' + layout) === '0px') {
           return {
             [`${className}`] : {
               ...arrayPropery
@@ -44,7 +46,7 @@ const responsiveSpacings = plugin(
         }
 
         return {
-          [`@media (min-width: ${theme("screens." + layout)})`]: {
+          [`@media (min-width: ${theme('screens.' + layout)})`]: {
             [`${className}`] : {
               ...arrayPropery
             }
@@ -52,7 +54,7 @@ const responsiveSpacings = plugin(
         }
       } else {
 
-        if (theme("screens." + layout) === '0px') {
+        if (theme('screens.' + layout) === '0px') {
           return {
             [`${className}`] : {
               [`${property}`] : space
@@ -61,7 +63,7 @@ const responsiveSpacings = plugin(
         }
 
         return {
-          [`@media (min-width: ${theme("screens." + layout)})`]: {
+          [`@media (min-width: ${theme('screens.' + layout)})`]: {
             [`${className}`] : {
               [`${property}`] : space
             }
@@ -75,7 +77,6 @@ const responsiveSpacings = plugin(
         const layout = spacing;
         Object.entries(value).forEach(([breakpoint, space]) => {
           prefixes.forEach((prefix) => {
-            console.log(prefix, breakpoint, layout, space)
             classes.push(generateClass(prefix, breakpoint, layout, space))
           })
         })
@@ -83,7 +84,6 @@ const responsiveSpacings = plugin(
     })
     
     addComponents(classes)
-    // console.log('classes', classes)
   }
 );
 
