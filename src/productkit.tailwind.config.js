@@ -1,136 +1,32 @@
 // SPDX-License-Identifier: MIT
 // © Daimler TSS GmbH
-const brandColors = {
-  white: 'var(--color-brand-neutral-white)',
-  black: 'var(--color-brand-neutral-black)',
-  neutral: {
-    50: 'var(--color-brand-neutral-50)',
-    100: 'var(--color-brand-neutral-100)',
-    200: 'var(--color-brand-neutral-200)',
-    300: 'var(--color-brand-neutral-300)',
-    400: 'var(--color-brand-neutral-400)',
-    500: 'var(--color-brand-neutral-500)',
-    600: 'var(--color-brand-neutral-600)',
-    700: 'var(--color-brand-neutral-700)',
-    800: 'var(--color-brand-neutral-800)',
-    900: 'var(--color-brand-neutral-900)',
-  },
-  blue: {
-    50: 'var(--color-brand-blue-50)',
-    100: 'var(--color-brand-blue-100)',
-    200: 'var(--color-brand-blue-200)',
-    300: 'var(--color-brand-blue-300)',
-    400: 'var(--color-brand-blue-400)',
-    500: 'var(--color-brand-blue-500)',
-    600: 'var(--color-brand-blue-600)',
-    700: 'var(--color-brand-blue-700)',
-    800: 'var(--color-brand-blue-800)',
-    900: 'var(--color-brand-blue-900)',
-  },
-  deepblue: {
-    50: 'var(--color-brand-deepblue-50)',
-    100: 'var(--color-brand-deepblue-100)',
-    200: 'var(--color-brand-deepblue-200)',
-    300: 'var(--color-brand-deepblue-300)',
-    400: 'var(--color-brand-deepblue-400)',
-    500: 'var(--color-brand-deepblue-500)',
-    600: 'var(--color-brand-deepblue-600)',
-    700: 'var(--color-brand-deepblue-700)',
-    800: 'var(--color-brand-deepblue-800)',
-    900: 'var(--color-brand-deepblue-900)',
-  },
-  grayblue: {
-    50: 'var(--color-brand-grayblue-50)',
-    100: 'var(--color-brand-grayblue-100)',
-    200: 'var(--color-brand-grayblue-200)',
-    300: 'var(--color-brand-grayblue-300)',
-    400: 'var(--color-brand-grayblue-400)',
-    500: 'var(--color-brand-grayblue-500)',
-    600: 'var(--color-brand-grayblue-600)',
-    700: 'var(--color-brand-grayblue-700)',
-    800: 'var(--color-brand-grayblue-800)',
-    900: 'var(--color-brand-grayblue-900)',
-  },
-  pink: {
-    50: 'var(--color-brand-pink-50)',
-    100: 'var(--color-brand-pink-100)',
-    200: 'var(--color-brand-pink-200)',
-    300: 'var(--color-brand-pink-300)',
-    400: 'var(--color-brand-pink-400)',
-    500: 'var(--color-brand-pink-500)',
-    600: 'var(--color-brand-pink-600)',
-    700: 'var(--color-brand-pink-700)',
-    800: 'var(--color-brand-pink-800)',
-    900: 'var(--color-brand-pink-900)',
-  },
-  purple: {
-    50: 'var(--color-brand-purple-50)',
-    100: 'var(--color-brand-purple-100)',
-    200: 'var(--color-brand-purple-200)',
-    300: 'var(--color-brand-purple-300)',
-    400: 'var(--color-brand-purple-400)',
-    500: 'var(--color-brand-purple-500)',
-    600: 'var(--color-brand-purple-600)',
-    700: 'var(--color-brand-purple-700)',
-    800: 'var(--color-brand-purple-800)',
-    900: 'var(--color-brand-purple-900)',
-  },
-  red: {
-    50: 'var(--color-brand-red-50)',
-    100: 'var(--color-brand-red-100)',
-    200: 'var(--color-brand-red-200)',
-    300: 'var(--color-brand-red-300)',
-    400: 'var(--color-brand-red-400)',
-    500: 'var(--color-brand-red-500)',
-    600: 'var(--color-brand-red-600)',
-    700: 'var(--color-brand-red-700)',
-    800: 'var(--color-brand-red-800)',
-    900: 'var(--color-brand-red-900)',
-  },
-  green: {
-    50: 'var(--color-brand-green-50)',
-    100: 'var(--color-brand-green-100)',
-    200: 'var(--color-brand-green-200)',
-    300: 'var(--color-brand-green-300)',
-    400: 'var(--color-brand-green-400)',
-    500: 'var(--color-brand-green-500)',
-    600: 'var(--color-brand-green-600)',
-    700: 'var(--color-brand-green-700)',
-    800: 'var(--color-brand-green-800)',
-    900: 'var(--color-brand-green-900)',
-  }
-}
-
-const brandSpacing = {
-  '0': '0px',
-  '0.5': 'var(--size-space-halfx)',
-  '1': 'var(--size-space-1x)',
-  '2': 'var(--size-space-2x)',
-  '3': 'var(--size-space-3x)',
-  '4': 'var(--size-space-4x)',
-  '6': 'var(--size-space-6x)',
-  '8': 'var(--size-space-8x)',
-  '9': 'var(--size-space-9x)',
-  '10': 'var(--size-space-10x)',
-  '11': 'var(--size-space-11x)',
-  '12': 'var(--size-space-12x)',
-  '16': 'var(--size-space-16x)',
-  '24': 'var(--size-space-24x)',
-}
-
 module.exports = {
   darkMode: 'class',
   content: ['./src/**/*.{html,js}'],
   theme: {
     screens: {
-      xs: 'var(--size-screen-xs)',
-      s: 'var(--size-screen-s)',
-      m: 'var(--size-screen-m)',
-      l: 'var(--size-screen-l)',
-      xl: 'var(--size-screen-xl)',
+      // There is no easy way to reference css variables here yet
+      xs: '0',
+      s: '600px',
+      m: '905px',
+      l: '1240px',
+      xl: '1440px',
     },
     spacing: {
-      ...brandSpacing,
+      '0': '0px',
+      '0.5': 'var(--size-space-halfx)',
+      '1': 'var(--size-space-1x)',
+      '2': 'var(--size-space-2x)',
+      '3': 'var(--size-space-3x)',
+      '4': 'var(--size-space-4x)',
+      '6': 'var(--size-space-6x)',
+      '8': 'var(--size-space-8x)',
+      '9': 'var(--size-space-9x)',
+      '10': 'var(--size-space-10x)',
+      '11': 'var(--size-space-11x)',
+      '12': 'var(--size-space-12x)',
+      '16': 'var(--size-space-16x)',
+      '24': 'var(--size-space-24x)'
     },
     responsiveSpacing: {
       xs: {
@@ -241,7 +137,104 @@ module.exports = {
       '4': 'var(--opacity-brand-4)',
     },
     colors: {
-      ...brandColors,
+      white: 'var(--color-brand-neutral-white)',
+      black: 'var(--color-brand-neutral-black)',
+      neutral: {
+        50: 'var(--color-brand-neutral-50)',
+        100: 'var(--color-brand-neutral-100)',
+        200: 'var(--color-brand-neutral-200)',
+        300: 'var(--color-brand-neutral-300)',
+        400: 'var(--color-brand-neutral-400)',
+        500: 'var(--color-brand-neutral-500)',
+        600: 'var(--color-brand-neutral-600)',
+        700: 'var(--color-brand-neutral-700)',
+        800: 'var(--color-brand-neutral-800)',
+        900: 'var(--color-brand-neutral-900)',
+      },
+      blue: {
+        50: 'var(--color-brand-blue-50)',
+        100: 'var(--color-brand-blue-100)',
+        200: 'var(--color-brand-blue-200)',
+        300: 'var(--color-brand-blue-300)',
+        400: 'var(--color-brand-blue-400)',
+        500: 'var(--color-brand-blue-500)',
+        600: 'var(--color-brand-blue-600)',
+        700: 'var(--color-brand-blue-700)',
+        800: 'var(--color-brand-blue-800)',
+        900: 'var(--color-brand-blue-900)',
+      },
+      deepblue: {
+        50: 'var(--color-brand-deepblue-50)',
+        100: 'var(--color-brand-deepblue-100)',
+        200: 'var(--color-brand-deepblue-200)',
+        300: 'var(--color-brand-deepblue-300)',
+        400: 'var(--color-brand-deepblue-400)',
+        500: 'var(--color-brand-deepblue-500)',
+        600: 'var(--color-brand-deepblue-600)',
+        700: 'var(--color-brand-deepblue-700)',
+        800: 'var(--color-brand-deepblue-800)',
+        900: 'var(--color-brand-deepblue-900)',
+      },
+      grayblue: {
+        50: 'var(--color-brand-grayblue-50)',
+        100: 'var(--color-brand-grayblue-100)',
+        200: 'var(--color-brand-grayblue-200)',
+        300: 'var(--color-brand-grayblue-300)',
+        400: 'var(--color-brand-grayblue-400)',
+        500: 'var(--color-brand-grayblue-500)',
+        600: 'var(--color-brand-grayblue-600)',
+        700: 'var(--color-brand-grayblue-700)',
+        800: 'var(--color-brand-grayblue-800)',
+        900: 'var(--color-brand-grayblue-900)',
+      },
+      pink: {
+        50: 'var(--color-brand-pink-50)',
+        100: 'var(--color-brand-pink-100)',
+        200: 'var(--color-brand-pink-200)',
+        300: 'var(--color-brand-pink-300)',
+        400: 'var(--color-brand-pink-400)',
+        500: 'var(--color-brand-pink-500)',
+        600: 'var(--color-brand-pink-600)',
+        700: 'var(--color-brand-pink-700)',
+        800: 'var(--color-brand-pink-800)',
+        900: 'var(--color-brand-pink-900)',
+      },
+      purple: {
+        50: 'var(--color-brand-purple-50)',
+        100: 'var(--color-brand-purple-100)',
+        200: 'var(--color-brand-purple-200)',
+        300: 'var(--color-brand-purple-300)',
+        400: 'var(--color-brand-purple-400)',
+        500: 'var(--color-brand-purple-500)',
+        600: 'var(--color-brand-purple-600)',
+        700: 'var(--color-brand-purple-700)',
+        800: 'var(--color-brand-purple-800)',
+        900: 'var(--color-brand-purple-900)',
+      },
+      red: {
+        50: 'var(--color-brand-red-50)',
+        100: 'var(--color-brand-red-100)',
+        200: 'var(--color-brand-red-200)',
+        300: 'var(--color-brand-red-300)',
+        400: 'var(--color-brand-red-400)',
+        500: 'var(--color-brand-red-500)',
+        600: 'var(--color-brand-red-600)',
+        700: 'var(--color-brand-red-700)',
+        800: 'var(--color-brand-red-800)',
+        900: 'var(--color-brand-red-900)',
+      },
+      green: {
+        50: 'var(--color-brand-green-50)',
+        100: 'var(--color-brand-green-100)',
+        200: 'var(--color-brand-green-200)',
+        300: 'var(--color-brand-green-300)',
+        400: 'var(--color-brand-green-400)',
+        500: 'var(--color-brand-green-500)',
+        600: 'var(--color-brand-green-600)',
+        700: 'var(--color-brand-green-700)',
+        800: 'var(--color-brand-green-800)',
+        900: 'var(--color-brand-green-900)',
+      },
       primary: 'var(--color-application-primary)',
       secondary: 'var(--color-application-secondary)',
       tertiary: 'var(--color-application-tertiary)',
@@ -311,7 +304,7 @@ module.exports = {
             gridTemplateColumns: 'repeat(12, minmax(0, 1fr))'
           },
         },
-        '.text-headline1': { 
+        '.text-headline1': {
           fontSize: theme('fontSize.3xl'),
           lineHeight: theme('lineHeight.xxl'),
           letterSpacing: theme('letterSpacing.xxs'),
@@ -322,7 +315,7 @@ module.exports = {
             letterSpacing: theme('letterSpacing.3xs'),
           }
         },
-        '.text-headline2': { 
+        '.text-headline2': {
           fontSize: theme('fontSize.xxl'),
           lineHeight: theme('lineHeight.xl'),
           letterSpacing: theme('letterSpacing.xs'),
@@ -333,7 +326,7 @@ module.exports = {
             letterSpacing: theme('letterSpacing.xxs'),
           }
         },
-        '.text-headline3': { 
+        '.text-headline3': {
           fontSize: theme('fontSize.xl'),
           lineHeight: theme('lineHeight.l'),
           letterSpacing: theme('letterSpacing.s'),
@@ -344,7 +337,7 @@ module.exports = {
             letterSpacing: theme('letterSpacing.xs'),
           }
         },
-        '.text-headline4': { 
+        '.text-headline4': {
           fontSize: theme('fontSize.l'),
           lineHeight: theme('lineHeight.m'),
           letterSpacing: theme('letterSpacing.m'),
@@ -354,7 +347,7 @@ module.exports = {
             letterSpacing: theme('letterSpacing.s'),
           }
         },
-        '.text-headline5': { 
+        '.text-headline5': {
           fontSize: theme('fontSize.m'),
           lineHeight: theme('lineHeight.s'),
           letterSpacing: theme('letterSpacing.l'),
@@ -364,7 +357,7 @@ module.exports = {
             letterSpacing: theme('letterSpacing.m'),
           }
         },
-        '.text-headline6': { 
+        '.text-headline6': {
           fontSize: theme('fontSize.s'),
           lineHeight: theme('lineHeight.xs'),
           letterSpacing: theme('letterSpacing.xl'),
@@ -374,7 +367,7 @@ module.exports = {
             letterSpacing: theme('letterSpacing.l'),
           }
         },
-        '.text-subtitle1': { 
+        '.text-subtitle1': {
           fontSize: theme('fontSize.xs'),
           lineHeight: theme('lineHeight.s'),
           letterSpacing: theme('letterSpacing.l'),
@@ -384,7 +377,7 @@ module.exports = {
             letterSpacing: theme('letterSpacing.m'),
           }
         },
-        '.text-subtitle2': { 
+        '.text-subtitle2': {
           fontSize: theme('fontSize.xxs'),
           lineHeight: theme('lineHeight.xs'),
           letterSpacing: theme('letterSpacing.m'),
@@ -394,7 +387,7 @@ module.exports = {
             letterSpacing: theme('letterSpacing.s'),
           }
         },
-        '.text-body1': { 
+        '.text-body1': {
           fontSize: theme('fontSize.xs'),
           lineHeight: theme('lineHeight.xs'),
           letterSpacing: theme('letterSpacing.xxl'),
@@ -404,7 +397,7 @@ module.exports = {
             letterSpacing: theme('letterSpacing.xxl'),
           }
         },
-        '.text-body2': { 
+        '.text-body2': {
           fontSize: theme('fontSize.xxs'),
           lineHeight: theme('lineHeight.xxs'),
           letterSpacing: theme('letterSpacing.xl'),
@@ -414,7 +407,7 @@ module.exports = {
             letterSpacing: theme('letterSpacing.l'),
           }
         },
-        '.text-button': { 
+        '.text-button': {
           fontSize: theme('fontSize.xs'),
           lineHeight: theme('lineHeight.xxs'),
           letterSpacing: theme('letterSpacing.3xl'),
@@ -425,7 +418,7 @@ module.exports = {
             letterSpacing: theme('letterSpacing.3xl'),
           }
         },
-        '.text-caption': { 
+        '.text-caption': {
           fontSize: theme('fontSize.3xs'),
           lineHeight: theme('lineHeight.xxs'),
           letterSpacing: theme('letterSpacing.xl'),
@@ -435,7 +428,7 @@ module.exports = {
             letterSpacing: theme('letterSpacing.xl'),
           }
         },
-        '.text-overline': { 
+        '.text-overline': {
           fontSize: theme('fontSize.3xs'),
           lineHeight: theme('lineHeight.xxs'),
           letterSpacing: theme('letterSpacing.4xl'),
@@ -448,7 +441,7 @@ module.exports = {
             letterSpacing: theme('letterSpacing.4xl'),
           }
         },
-        '.divider': { 
+        '.divider': {
           height: '3px',
           '@screen m': {
             height: '4px',
