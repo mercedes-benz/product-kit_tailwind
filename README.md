@@ -29,7 +29,7 @@ npm install -D @daimler/productkit-tailwind
 ```javascript
 module.exports = {
   presets: [
-    require('@daimler/productkit-tailwind')
+    require('@daimler/productkit-tailwind/productkit.tailwind.config.js')
   ]
 ```
 
