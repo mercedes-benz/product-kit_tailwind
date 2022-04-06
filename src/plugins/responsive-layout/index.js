@@ -22,28 +22,59 @@ const responsiveLayout = plugin(
           paddingLeft: theme('spacing.4'),
           paddingRight: theme('spacing.4'),
           columnGap: theme('spacing.2'),
-          gridTemplateColumns: 'repeat(--layout-column-2x, minmax(0, 1fr))'
+          gridTemplateColumns: 'repeat(var(--layout-column-2x), minmax(0, 1fr))'
         },
         '@screen m': {
-          maxWidth: 'var(--layout-application-m-body-max-size)',
+          maxWidth: 'var(--layout-application-compact-m-body-max-size)',
           paddingLeft: theme('spacing.0'),
           paddingRight: theme('spacing.0'),
           columnGap: theme('spacing.3'),
-          gridTemplateColumns: 'repeat(--layout-column-3x, minmax(0, 1fr))'
+          gridTemplateColumns: 'repeat(var(--layout-column-3x), minmax(0, 1fr))'
         },
         '@screen l': {
           maxWidth: '100%',
           paddingLeft: theme('spacing.24'),
           paddingRight: theme('spacing.24'),
           columnGap: theme('spacing.3'),
-          gridTemplateColumns: 'repeat(--layout-column-3x, minmax(0, 1fr))'
+          gridTemplateColumns: 'repeat(var(--layout-column-3x), minmax(0, 1fr))'
         },
         '@screen xl': {
-          maxWidth: 'var(--layout-application-xl-body-max-size)',
+          maxWidth: 'var(--layout-application-compact-xl-body-max-size)',
           paddingLeft: theme('spacing.0'),
           paddingRight: theme('spacing.0'),
           columnGap: theme('spacing.3'),
-          gridTemplateColumns: 'repeat(--layout-column-3x, minmax(0, 1fr))'
+          gridTemplateColumns: 'repeat(var(--layout-column-3x), minmax(0, 1fr))'
+        }
+      },
+      '.container-wide': {
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        maxWidth: 'var(--layout-application-wide-xs-body-max-size)',
+        display: 'grid',
+        '@screen xs': {
+          maxWidth: 'var(--layout-application-wide-xs-body-max-size)',
+          columnGap: theme('spacing.2'),
+          gridTemplateColumns: 'repeat(var(--layout-column-1x), minmax(0, 1fr))'
+        },
+        '@screen s': {
+          maxWidth: 'var(--layout-application-wide-s-body-max-size)',
+          columnGap: theme('spacing.3'),
+          gridTemplateColumns: 'repeat(var(--layout-column-3x), minmax(0, 1fr))'
+        },
+        '@screen m': {
+          maxWidth: 'var(--layout-application-wide-m-body-max-size)',
+          columnGap: theme('spacing.3'),
+          gridTemplateColumns: 'repeat(var(--layout-column-3x), minmax(0, 1fr))'
+        },
+        '@screen l': {
+          maxWidth: 'var(--layout-application-wide-l-body-max-size)',
+          columnGap: theme('spacing.3'),
+          gridTemplateColumns: 'repeat(var(--layout-column-3x), minmax(0, 1fr))'
+        },
+        '@screen xl': {
+          maxWidth: 'var(--layout-application-wide-xl-body-max-size)',
+          columnGap: theme('spacing.3'),
+          gridTemplateColumns: 'repeat(var(--layout-column-3x), minmax(0, 1fr))'
         }
       }
     })
