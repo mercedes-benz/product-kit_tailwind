@@ -21,7 +21,7 @@ The following theme definitions have predefined values from [Product Kit Core](h
 `1.` Add Product Kit Tailwind as a dependency through npm:
 
 ```bash
-npm -i -D @daimler/productkit-tailwind
+npm install -D @daimler/productkit-tailwind
 ```
 
 `2.` Import Product Kit Tailwind to your tailwind.config.js like so:
@@ -29,14 +29,14 @@ npm -i -D @daimler/productkit-tailwind
 ```javascript
 module.exports = {
   presets: [
-    require('@daimler/productkit-tailwind/productkit.tailwind.config')
+    require('@daimler/productkit-tailwind')
   ]
 ```
 
 `3.` Product Kit Tailwind uses CSS variables from Product Kit Core. In order to get Tailwind to recognize the variables make sure to add the dependency [postcss-import](https://www.npmjs.com/package/postcss-import):
 
 ```bash
-npm -i -D postcss-import
+npm install -D postcss-import
 ```
 
 `4.` Add [postcss-import](https://www.npmjs.com/package/postcss-import) to your postcss.config.js:
@@ -50,6 +50,16 @@ module.exports = {
     // cssnano: {}, -> recommended
   }
 }
+```
+
+`5.` Add additional style information to your main `styles` css
+
+```css
+@import '@daimler/productkit-tailwind/src/styles.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 ```
 
 ## Usage
@@ -143,7 +153,7 @@ The styleguide defines a divider below headlines. You can use the predefined cla
 
 ### Responsive Layout
 
-Product Kit Tailwind provides a `.container` class that you can use to adapt the content of your frontend to layout specifications of [Product Kit Core](https://github.com/mercedes-benz/product-kit_core). Everything inside your container element is arranged according to predefined breakpoints and grid definitions.
+Product Kit Tailwind provides a `.container` and `.container-wide` class that you can use to adapt the content of your frontend to layout specifications of [Product Kit Core](https://github.com/mercedes-benz/product-kit_core). Everything inside your container element is arranged according to predefined breakpoints and grid definitions.
 
 ```html
 <div class="container">
