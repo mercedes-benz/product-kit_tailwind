@@ -1,5 +1,5 @@
 <!-- SPDX-License-Identifier: MIT -->
-# ![Product Kit Tailwind Logo](https://github.com/mercedes-benz/product-kit_tailwind/raw/main/docs/images/productkit_tailwind_github_logo.png)
+# ![Product Kit Tailwind Logo](./docs/images/pk_tailwind_title_image.png)
 
 ![license](https://img.shields.io/badge/license-MIT-38de03e?style=flat)
 [![npm](https://img.shields.io/npm/v/@daimler/productkit-tailwind)](https://www.npmjs.com/package/@daimler/productkit-tailwind)
