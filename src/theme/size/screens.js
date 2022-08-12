@@ -1,3 +1,4 @@
+/* SPDX-License-Identifier: MIT */
 module.exports = {
   // There is no easy way to reference css variables here yet
   xs: '0',

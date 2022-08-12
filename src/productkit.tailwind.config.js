@@ -1,5 +1,4 @@
 // SPDX-License-Identifier: MIT
-// © Daimler TSS GmbH
 module.exports = {
   darkMode: 'class',
   theme: {

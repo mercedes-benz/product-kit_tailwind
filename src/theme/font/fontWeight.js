@@ -1,3 +1,4 @@
+/* SPDX-License-Identifier: MIT */
 module.exports = {
   light: 'var(--font-weight-light)',
   regular: 'var(--font-weight-regular)',

@@ -1,3 +1,4 @@
+/* SPDX-License-Identifier: MIT */
 module.exports = {
   white: 'var(--color-brand-neutral-white)',
   black: 'var(--color-brand-neutral-black)',

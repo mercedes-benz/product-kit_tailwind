@@ -1,3 +1,4 @@
+/* SPDX-License-Identifier: MIT */
 module.exports = {
   '3xs': 'var(--size-line-height-3xs)',
   'xxs': 'var(--size-line-height-xxs)',

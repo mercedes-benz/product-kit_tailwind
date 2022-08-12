@@ -1,3 +1,4 @@
+/* SPDX-License-Identifier: MIT */
 module.exports = {
   '1': 'var(--opacity-brand-1)',
   '2': 'var(--opacity-brand-2)',
