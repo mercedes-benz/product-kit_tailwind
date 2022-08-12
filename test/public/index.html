@@ -4,9 +4,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com"> 
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
   <link href="../dist/main.css" rel="stylesheet">
   <script>
     var darkMode = {
@@ -20,78 +17,79 @@
      }
     </script>
 </head>
-<body class="bg-background container-wide">
-
-  <button class="toggle text-primary border-2 rounded border-outline m-2 px-2 py-1" onclick="darkMode.toggle()">
-    toggle light/dark mode
-  </button>
-
-  <div class="bg-background p-6 text-body1 text-contrast-background opacity-4 p-sm-2">
-    Body1
-  </div>
-
-  <div class="bg-primary hover:bg-secondary text-headline3 text-contrast-primary p-6 p-sm-2">
-    Headline3
-  </div>
-
-  <div class="bg-secondary hover:bg-primary text-subtitle1 text-contrast-secondary p-6 p-sm-2">
-    Subtitle1
-  </div>
-
-  <div class="bg-tertiary hover:bg-quaternary text-caption text-contrast-tertiary hover:text-contrast-quaternary p-6">
-    Caption
-  </div>
-
-  <div class="bg-quaternary hover:bg-tertiary text-headline2 text-contrast-quaternary hover:text-contrast-tertiary p-6">
-    Headline2
-  </div>
-
-  <div class="bg-gradient-to-r from-primary via-secondary to-tertiary p-6"></div>
-  <div class="grid grid-cols-3 divide-x divide-primary text-black">
-    <div>01</div>
-    <div>02</div>
-    <div>03</div>
-  </div>
-
-<h2>SPACING</h2>
-
-  <div class="grid grid-cols-3 divide-x divide-primary text-black">
-    <div class="m-m p-2 bg-secondary">01</div>
-    <div class="m-m p-2 bg-secondary">02</div>
-    <div class="m-m p-2 bg-secondary">03</div>
-  </div>
-
-  <div class="grid grid-cols-4 text-black">
-    <div class="mt-m p-2 bg-secondary">01</div>
-    <div class="mb-m p-2 bg-secondary">02</div>
-    <div class="mr-m p-2 bg-secondary">03</div>
-    <div class="ml-m p-2 bg-secondary">03</div>
-  </div>
-
-  <div class="grid grid-cols-2 text-black">
-    <div class="mx-m p-2 bg-secondary">01</div>
-    <div class="my-m p-2 bg-secondary">02</div>
-  </div>
-
-  <div class="grid gap-m grid-cols-2 mt-m">
-    <div class="p-2 bg-secondary">01</div>
-    <div class="p-2 bg-secondary">02</div>
-    <div class="p-2 bg-secondary">03</div>
-    <div class="p-2 bg-secondary">04</div>
-  </div>
-
-  <div class="grid gap-y-m grid-cols-2 mt-m">
-    <div class="p-2 bg-secondary">01</div>
-    <div class="p-2 bg-secondary">02</div>
-    <div class="p-2 bg-secondary">03</div>
-    <div class="p-2 bg-secondary">04</div>
-  </div>
-
-  <div class="grid gap-x-m grid-cols-2 mt-m">
-    <div class="p-2 bg-secondary">01</div>
-    <div class="p-2 bg-secondary">02</div>
-    <div class="p-2 bg-secondary">03</div>
-    <div class="p-2 bg-secondary">04</div>
+<body class="bg-background container">
+  <div class="col-span-full">
+    <button class="toggle text-primary-variant border-2 rounded border-primary-variant m-2 px-2 py-1" onclick="darkMode.toggle()">
+      toggle light/dark mode
+    </button>
+  
+    <div class="bg-background p-6 text-body1 text-contrast-background p-sm-2">
+      Body1
+    </div>
+  
+    <div class="bg-primary hover:bg-secondary text-headline3 text-contrast-primary p-6 p-sm-2">
+      Headline3
+    </div>
+  
+    <div class="bg-secondary hover:bg-primary text-subtitle1 text-contrast-secondary p-6 p-sm-2">
+      Subtitle1
+    </div>
+  
+    <div class="bg-tertiary hover:bg-quaternary text-caption text-contrast-tertiary hover:text-contrast-quaternary p-6">
+      Caption
+    </div>
+  
+    <div class="bg-quaternary hover:bg-tertiary text-headline2 text-contrast-quaternary hover:text-contrast-tertiary p-6">
+      Headline2
+    </div>
+  
+    <div class="bg-gradient-to-r from-primary via-secondary to-tertiary p-6"></div>
+    <div class="grid grid-cols-3 divide-x divide-primary text-black">
+      <div>01</div>
+      <div>02</div>
+      <div>03</div>
+    </div>
+  
+    <h2>SPACING</h2>
+  
+    <div class="grid grid-cols-3 divide-x divide-primary text-black">
+      <div class="m-m p-2 bg-secondary">01</div>
+      <div class="m-m p-2 bg-secondary">02</div>
+      <div class="m-m p-2 bg-secondary">03</div>
+    </div>
+  
+    <div class="grid grid-cols-4 text-black">
+      <div class="mt-m p-2 bg-secondary">01</div>
+      <div class="mb-m p-2 bg-secondary">02</div>
+      <div class="mr-m p-2 bg-secondary">03</div>
+      <div class="ml-m p-2 bg-secondary">03</div>
+    </div>
+  
+    <div class="grid grid-cols-2 text-black">
+      <div class="mx-m p-2 bg-secondary">01</div>
+      <div class="my-m p-2 bg-secondary">02</div>
+    </div>
+  
+    <div class="grid gap-m grid-cols-2 mt-m">
+      <div class="p-2 bg-secondary">01</div>
+      <div class="p-2 bg-secondary">02</div>
+      <div class="p-2 bg-secondary">03</div>
+      <div class="p-2 bg-secondary">04</div>
+    </div>
+  
+    <div class="grid gap-y-m grid-cols-2 mt-m">
+      <div class="p-2 bg-secondary">01</div>
+      <div class="p-2 bg-secondary">02</div>
+      <div class="p-2 bg-secondary">03</div>
+      <div class="p-2 bg-secondary">04</div>
+    </div>
+  
+    <div class="grid gap-x-m grid-cols-2 mt-m">
+      <div class="p-2 bg-secondary">01</div>
+      <div class="p-2 bg-secondary">02</div>
+      <div class="p-2 bg-secondary">03</div>
+      <div class="p-2 bg-secondary">04</div>
+    </div>
   </div>
 </body>
 </html>

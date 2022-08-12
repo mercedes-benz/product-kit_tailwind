@@ -5,8 +5,8 @@
   "main": "src/",
   "license": "MIT",
   "scripts": {
-    "test-build": "(cd test && postcss ./public/assets/css/main.css -o ./dist/main.css)",
-    "test-watch": "(cd test && postcss -w ./public/assets/css/main.css -o ./dist/main.css)"
+    "test-build": "(cd test && npx tailwindcss -i ./public/assets/css/main.css -o ./dist/main.css)",
+    "test-watch": "(cd test && npx tailwindcss -i ./public/assets/css/main.css -o ./dist/main.css --watch)"
   },
   "repository": "https://github.com/mercedes-benz/product-kit_tailwind.git",
   "bugs": "https://github.com/mercedes-benz/product-kit_tailwind/issues",
@@ -15,9 +15,6 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.8",
-    "cssnano": "^5.1.12",
-    "postcss-cli": "^10.0.0",
-    "postcss-import": "^14.1.0",
     "tailwindcss": "^3.1.8"
   },
   "dependencies": {

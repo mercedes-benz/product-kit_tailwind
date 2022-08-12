@@ -1,6 +1,5 @@
 /* SPDX-License-Identifier: MIT */
+@import "tailwindcss/base";
 @import '../../../../src/styles.css';
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";

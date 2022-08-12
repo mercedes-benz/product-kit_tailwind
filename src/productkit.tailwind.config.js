@@ -5,16 +5,10 @@ module.exports = {
     screens: require('./theme/size/screens'),
     spacing: require('./theme/size/spacing'),
     responsiveSpacing: require('./theme/size/responsiveSpacing'),
-    fontFamily: require('./theme/font/fontFamily'),
     fontWeight: require('./theme/font/fontWeight'),
-    fontSize: require('./theme/font/fontSize'),
-    lineHeight: require('./theme/font/lineHeight'),
-    letterSpacing: require('./theme/font/letterSpacing'),
     opacity: require('./theme/opacity/opacity'),
     colors: require('./theme/color/colors'),
-  },
-  corePlugins: {
-    container: false
+    borderRadius: require('./theme/size/borderRadius'),
   },
   plugins: [
     require('./plugins/responsive-spacings'),
@@ -23,7 +17,7 @@ module.exports = {
     function ({ addComponents, theme }) {
       addComponents({
         '.divider': {
-          backgroundColor: theme('colors.secondary'),
+          backgroundColor: theme('colors.primary'),
           height: '3px',
           '@screen m': {
             height: '4px',
