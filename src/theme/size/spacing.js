@@ -1,4 +1,3 @@
-/* SPDX-License-Identifier: MIT */
 module.exports = {
   '0': '0px',
   '0.5': 'var(--size-space-halfx)',

@@ -1,5 +1,7 @@
 /* SPDX-License-Identifier: MIT */
-@import "tailwindcss/base";
+/* © Daimler TSS GmbH */
 @import '../../../../src/styles.css';
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

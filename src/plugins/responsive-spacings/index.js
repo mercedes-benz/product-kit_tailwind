@@ -1,4 +1,5 @@
 // SPDX-License-Identifier: MIT
+// © Daimler TSS GmbH
 const plugin = require('tailwindcss/plugin')
 
 const responsiveSpacings = plugin(

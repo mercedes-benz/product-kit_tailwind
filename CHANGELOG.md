@@ -2,11 +2,6 @@
 
 All notable changes to this project will be documented in this file.
 
-## 2.0.0
-- Updated Product Kit Core dependency to 2.0.0
-- Removed styles not available in Product Kit Core v2 anymore
-- Updated styles according to Product Kit Core v2
-
 ## 1.1.0
 
 - Updated Product Kit Core dependency to 1.3.0
