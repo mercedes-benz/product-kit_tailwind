@@ -1,3 +1,4 @@
+/* SPDX-License-Identifier: MIT */
 module.exports = {
   xs: {
     '3xs': 'var(--size-application-spacing-xs-3xs)',
@@ -53,5 +54,16 @@ module.exports = {
     xl: 'var(--size-application-spacing-xl-xl)',
     xxl: 'var(--size-application-spacing-xl-xxl)',
     '3xl': 'var(--size-application-spacing-xl-3xl)'
+  },
+  xxl: {
+    '3xs': 'var(--size-application-spacing-xxl-3xs)',
+    xxs: 'var(--size-application-spacing-xxl-xxs)',
+    xs: 'var(--size-application-spacing-xxl-xs)',
+    s: 'var(--size-application-spacing-xxl-s)',
+    m: 'var(--size-application-spacing-xxl-m)',
+    l: 'var(--size-application-spacing-xxl-l)',
+    xl: 'var(--size-application-spacing-xxl-xl)',
+    xxl: 'var(--size-application-spacing-xxl-xxl)',
+    '3xl': 'var(--size-application-spacing-xxl-3xl)'
   }
 }

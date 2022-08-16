@@ -1,5 +1,5 @@
 <!-- SPDX-License-Identifier: MIT -->
-# ![Product Kit Tailwind Logo](https://github.com/mercedes-benz/product-kit_tailwind/raw/main/docs/images/productkit_tailwind_github_logo.png)
+# ![Product Kit Tailwind Logo](./docs/images/pk_tailwind_title_image.png)
 
 ![license](https://img.shields.io/badge/license-MIT-38de03e?style=flat)
 [![npm](https://img.shields.io/npm/v/@daimler/productkit-tailwind)](https://www.npmjs.com/package/@daimler/productkit-tailwind)
@@ -13,6 +13,7 @@ The following theme definitions have predefined values from [Product Kit Core](h
 * Spacing
 * Layout
 * Opacity
+* Sizes
 
 > If you need further improvements to Product Kit Tailwind or miss something from the styleguide feel free to open an [issue](https://github.com/mercedes-benz/product-kit_tailwind/issues)!
 
@@ -33,38 +34,18 @@ module.exports = {
   ]
 ```
 
-`3.` Product Kit Tailwind uses CSS variables from Product Kit Core. In order to get Tailwind to recognize the variables make sure to add the dependency [postcss-import](https://www.npmjs.com/package/postcss-import):
-
-```bash
-npm install -D postcss-import
-```
-
-`4.` Add [postcss-import](https://www.npmjs.com/package/postcss-import) to your postcss.config.js:
-
-```javascript
-module.exports = {
-  plugins: {
-    'postcss-import': {},
-    tailwindcss: {},
-    autoprefixer: {},
-    // cssnano: {}, -> recommended
-  }
-}
-```
-
 `5.` Add additional style information to your main `styles` css
 
 ```css
+@import 'tailwindcss/base';
 @import '@daimler/productkit-tailwind/src/styles.css';
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 ```
 
 ## Usage
 
-Product Kit Tailwind offers utility functions for frontends incorporating the styleguide of Daimler TSS.
+Product Kit Tailwind offers utility functions for frontends incorporating the styleguide of Mercedes-Benz Tech Innovation.
 
 If you want to get the most out of Product Kit Tailwind please familiarise yourself with [Product Kit Core](https://github.com/mercedes-benz/product-kit_core) and its design tokens.
 
@@ -73,7 +54,7 @@ If you want to get the most out of Product Kit Tailwind please familiarise yours
 All colors defined in [Product Kit Core](https://github.com/mercedes-benz/product-kit_core) can be referenced through Tailwinds utility functions:
 
 ```html
-<div class="bg-primary text-contrast-background border-blue-400">
+<div class="bg-primary text-contrast-background border-goldentainoi-400">
 ```
 
 There is no need to specify dark mode specific colors. Application colors like `primary`, `secondary`, `background` or `surface` will automatically switch to their dark mode representations. Learn more about this behavior in the `Dark Mode` section below.
@@ -121,7 +102,7 @@ Every text style defined in [Product Kit Core](https://github.com/mercedes-benz/
 </span>
 ```
 
-When using a predefined text style class you get responsive behavior for free! The above class definition will translate to:
+When using a predefined text style class you get responsive behavior for free! The above class definition will translate to: (example values)
 
 ```css
 .text-headline3 {
@@ -149,7 +130,7 @@ The styleguide defines a divider below headlines. You can use the predefined cla
 <div class="divider" />
 ```
 
-> **Note:** You have to calculate the width of the divider according to the headline size. Learn more about the divider behavior in the Daimler TSS styleguide.
+> **Note:** You have to calculate the width of the divider according to the headline size. Learn more about the divider behavior in the Mercedes-Benz Tech Innovation styleguide.
 
 ### Responsive Layout
 
@@ -161,20 +142,17 @@ Product Kit Tailwind provides a `.container` and `.container-wide` class that yo
 </div>
 ```
 
-The class above will translate to the following css:
+The class above will translate to the following css: (example values)
 
 ```css
 .container {
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
+    width: 90%;
     display: grid;
+    margin: auto;
 }
 @screen xs {
     .container {
-        max-width: 100%;
-        padding-left: 16px;
-        padding-right: 16px;
+        width: 87%;
         column-gap: 16px;
         grid-template-columns: repeat(4, minmax(0, 1fr));
     }
@@ -202,8 +180,9 @@ The following color names will switch automatically:
 * quternary
 * background
 * surface
-* error
 * outline
+* error
+* success
 * **all contrast colors**
 
 > **Note**: Contrast colors are used as text colors. If text is displayed on the background color `primary` the text color should be `contrast-primary`. Please also make yourself familiar with text opacity values. You can find further information [here](https://github.com/mercedes-benz/product-kit_core/blob/main/src/tokens/opacity/application.json).
@@ -215,7 +194,7 @@ If you want to contribute to this project, please read the [contributing guide](
 
 ## Code of Conduct
 
-Please read our [Code of Conduct](https://github.com/Daimler/daimler-foss/blob/master/CODE_OF_CONDUCT.md) as it is our base for interaction.
+Please read our [Code of Conduct](https://github.com/mercedes-benz/foss/blob/master/CODE_OF_CONDUCT.md) as it is our base for interaction.
 
 ## License
 
@@ -223,7 +202,7 @@ This project is licensed under the [MIT LICENSE](LICENSE).
 
 ## Provider Information
 
-Please visit <https://www.daimler-tss.com/en/imprint/> for information on the provider.
+Please visit <https://www.mercedes-benz-techinnovation.com/en/imprint/> for information on the provider.
 
 Notice: Before you use the program in productive use, please take all necessary precautions,
 e.g. testing and verifying the program with regard to your specific use.
