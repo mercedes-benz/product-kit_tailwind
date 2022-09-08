@@ -1,6 +1,6 @@
 {
   "name": "@daimler/productkit-tailwind",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Product Kit Tailwind provides tailwind presets that bring design tokens of Product Kit Core to Tailwind",
   "main": "src/",
   "license": "MIT",
