@@ -1,6 +1,7 @@
 <!-- SPDX-License-Identifier: MIT -->
 <!doctype html>
 <html>
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,79 +12,82 @@
         if (!document.documentElement.classList.contains('dark')) {
           document.documentElement.classList.add('dark');
         } else {
-            document.documentElement.classList.remove('dark');
+          document.documentElement.classList.remove('dark');
         }
       },
-     }
-    </script>
+    }
+  </script>
 </head>
-<body class="bg-background container">
+
+<body class="bg-background container text-contrast-background">
   <div class="col-span-full">
-    <button class="toggle text-primary-variant border-2 rounded border-primary-variant m-2 px-2 py-1" onclick="darkMode.toggle()">
+    <button class="toggle text-primary-variant border-2 rounded border-primary-variant m-2 px-2 py-1"
+      onclick="darkMode.toggle()">
       toggle light/dark mode
     </button>
-  
+
     <div class="bg-background p-6 text-body1 text-contrast-background p-sm-2">
       Body1
     </div>
-  
+
     <div class="bg-primary hover:bg-secondary text-headline3 text-contrast-primary p-6 p-sm-2">
       Headline3
     </div>
-  
+
     <div class="bg-secondary hover:bg-primary text-subtitle1 text-contrast-secondary p-6 p-sm-2">
       Subtitle1
     </div>
-  
+
     <div class="bg-tertiary hover:bg-quaternary text-caption text-contrast-tertiary hover:text-contrast-quaternary p-6">
       Caption
     </div>
-  
-    <div class="bg-quaternary hover:bg-tertiary text-headline2 text-contrast-quaternary hover:text-contrast-tertiary p-6">
+
+    <div
+      class="bg-quaternary hover:bg-tertiary text-headline2 text-contrast-quaternary hover:text-contrast-tertiary p-6">
       Headline2
     </div>
-  
+
     <div class="bg-gradient-to-r from-primary via-secondary to-tertiary p-6"></div>
     <div class="grid grid-cols-3 divide-x divide-primary text-black">
       <div>01</div>
       <div>02</div>
       <div>03</div>
     </div>
-  
+
     <h2>SPACING</h2>
-  
+
     <div class="grid grid-cols-3 divide-x divide-primary text-black">
       <div class="m-m p-2 bg-secondary">01</div>
       <div class="m-m p-2 bg-secondary">02</div>
       <div class="m-m p-2 bg-secondary">03</div>
     </div>
-  
+
     <div class="grid grid-cols-4 text-black">
       <div class="mt-m p-2 bg-secondary">01</div>
       <div class="mb-m p-2 bg-secondary">02</div>
       <div class="mr-m p-2 bg-secondary">03</div>
       <div class="ml-m p-2 bg-secondary">03</div>
     </div>
-  
+
     <div class="grid grid-cols-2 text-black">
       <div class="mx-m p-2 bg-secondary">01</div>
       <div class="my-m p-2 bg-secondary">02</div>
     </div>
-  
+
     <div class="grid gap-m grid-cols-2 mt-m">
       <div class="p-2 bg-secondary">01</div>
       <div class="p-2 bg-secondary">02</div>
       <div class="p-2 bg-secondary">03</div>
       <div class="p-2 bg-secondary">04</div>
     </div>
-  
+
     <div class="grid gap-y-m grid-cols-2 mt-m">
       <div class="p-2 bg-secondary">01</div>
       <div class="p-2 bg-secondary">02</div>
       <div class="p-2 bg-secondary">03</div>
       <div class="p-2 bg-secondary">04</div>
     </div>
-  
+
     <div class="grid gap-x-m grid-cols-2 mt-m">
       <div class="p-2 bg-secondary">01</div>
       <div class="p-2 bg-secondary">02</div>
@@ -91,5 +95,150 @@
       <div class="p-2 bg-secondary">04</div>
     </div>
   </div>
+  <p class="text-headline1 col-span-3 m:col-span-3 l:col-span-4 xxl:col-span-3 mt-xxl">
+    Headline 1
+  </p>
+  <p class="text-headline1 col-span-5 m:col-span-5 l:col-span-8 xxl:col-span-9 mt-xxl">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat voluptatibus consequuntur, facere eum ratione,
+    tenetur ea sunt soluta aliquam mollitia in suscipit inventore temporibus? Illo dicta dolorum obcaecati dolore
+    deleniti?
+  </p>
+  <p class="text-headline2 col-span-3 m:col-span-3 l:col-span-4 xxl:col-span-3 my-xl">
+    Headline 2
+  </p>
+  <p class="text-headline2 col-span-5 m:col-span-5 l:col-span-8 xxl:col-span-9 my-xl">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat voluptatibus consequuntur, facere eum ratione,
+    tenetur ea sunt soluta aliquam mollitia in suscipit inventore temporibus? Illo dicta dolorum obcaecati dolore
+    deleniti?
+  </p>
+  <p class="text-headline3 col-span-3 m:col-span-3 l:col-span-4 xxl:col-span-3 my-xl">
+    Headline 3
+  </p>
+  <p class="text-headline3 col-span-5 m:col-span-5 l:col-span-8 xxl:col-span-9 my-xl">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat voluptatibus consequuntur, facere eum ratione,
+    tenetur ea sunt soluta aliquam mollitia in suscipit inventore temporibus? Illo dicta dolorum obcaecati dolore
+    deleniti?
+  </p>
+  <p class="text-headline4 col-span-3 m:col-span-3 l:col-span-4 xxl:col-span-3 my-xl">
+    Headline 4
+  </p>
+  <p class="text-headline4 col-span-5 m:col-span-5 l:col-span-8 xxl:col-span-9 my-xl">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat voluptatibus consequuntur, facere eum ratione,
+    tenetur ea sunt soluta aliquam mollitia in suscipit inventore temporibus? Illo dicta dolorum obcaecati dolore
+    deleniti?
+  </p>
+  <p class="text-headline5 col-span-3 m:col-span-3 l:col-span-4 xxl:col-span-3 my-xl">
+    Headline 5
+  </p>
+  <p class="text-headline5 col-span-5 m:col-span-5 l:col-span-8 xxl:col-span-9 my-xl">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat voluptatibus consequuntur, facere eum ratione,
+    tenetur ea sunt soluta aliquam mollitia in suscipit inventore temporibus? Illo dicta dolorum obcaecati dolore
+    deleniti?
+  </p>
+  <p class="text-headline6 col-span-3 m:col-span-3 l:col-span-4 xxl:col-span-3 my-xl">
+    Headline 6
+  </p>
+  <p class="text-headline6 col-span-5 m:col-span-5 l:col-span-8 xxl:col-span-9 my-xl">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat voluptatibus consequuntur, facere eum ratione,
+    tenetur ea sunt soluta aliquam mollitia in suscipit inventore temporibus? Illo dicta dolorum obcaecati dolore
+    deleniti?
+  </p>
+  <p class="text-subtitle1 col-span-3 m:col-span-3 l:col-span-4 xxl:col-span-3 my-xl">
+    Subtitle 1
+  </p>
+  <p class="text-subtitle1 col-span-5 m:col-span-5 l:col-span-8 xxl:col-span-9 my-xl">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat voluptatibus consequuntur, facere eum ratione,
+    tenetur ea sunt soluta aliquam mollitia in suscipit inventore temporibus? Illo dicta dolorum obcaecati dolore
+    deleniti?
+  </p>
+  <p class="text-subtitle1-strong col-span-3 m:col-span-3 l:col-span-4 xxl:col-span-3 my-xl">
+    Subtitle 1 Strong
+  </p>
+  <p class="text-subtitle1-strong col-span-5 m:col-span-5 l:col-span-8 xxl:col-span-9 my-xl">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat voluptatibus consequuntur, facere eum ratione,
+    tenetur ea sunt soluta aliquam mollitia in suscipit inventore temporibus? Illo dicta dolorum obcaecati dolore
+    deleniti?
+  </p>
+  <p class="text-subtitl2 col-span-3 m:col-span-3 l:col-span-4 xxl:col-span-3 my-xl">
+    Subtitle 2
+  </p>
+  <p class="text-subtitle2 col-span-5 m:col-span-5 l:col-span-8 xxl:col-span-9 my-xl">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat voluptatibus consequuntur, facere eum ratione,
+    tenetur ea sunt soluta aliquam mollitia in suscipit inventore temporibus? Illo dicta dolorum obcaecati dolore
+    deleniti?
+  </p>
+  <p class="text-subtitl2-strong col-span-3 m:col-span-3 l:col-span-4 xxl:col-span-3 my-xl">
+    Subtitle 2 Strong
+  </p>
+  <p class="text-subtitle2-strong col-span-5 m:col-span-5 l:col-span-8 xxl:col-span-9 my-xl">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat voluptatibus consequuntur, facere eum ratione,
+    tenetur ea sunt soluta aliquam mollitia in suscipit inventore temporibus? Illo dicta dolorum obcaecati dolore
+    deleniti?
+  </p>
+  <p class="text-body1 col-span-3 m:col-span-3 l:col-span-4 xxl:col-span-3 my-xl">
+    Body 1
+  </p>
+  <p class="text-body1 col-span-5 m:col-span-5 l:col-span-8 xxl:col-span-9 my-xl">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat voluptatibus consequuntur, facere eum ratione,
+    tenetur ea sunt soluta aliquam mollitia in suscipit inventore temporibus? Illo dicta dolorum obcaecati dolore
+    deleniti?
+  </p>
+  <p class="text-body1-strong col-span-3 m:col-span-3 l:col-span-4 xxl:col-span-3 my-xl">
+    Body 1 Strong
+  </p>
+  <p class="text-body1-strong col-span-5 m:col-span-5 l:col-span-8 xxl:col-span-9 my-xl">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat voluptatibus consequuntur, facere eum ratione,
+    tenetur ea sunt soluta aliquam mollitia in suscipit inventore temporibus? Illo dicta dolorum obcaecati dolore
+    deleniti?
+  </p>
+  <p class="text-body2 col-span-3 m:col-span-3 l:col-span-4 xxl:col-span-3 my-xl">
+    Body 2
+  </p>
+  <p class="text-body2 col-span-5 m:col-span-5 l:col-span-8 xxl:col-span-9 my-xl">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat voluptatibus consequuntur, facere eum ratione,
+    tenetur ea sunt soluta aliquam mollitia in suscipit inventore temporibus? Illo dicta dolorum obcaecati dolore
+    deleniti?
+  </p>
+  <p class="text-body2-strong col-span-3 m:col-span-3 l:col-span-4 xxl:col-span-3 my-xl">
+    Body 2 Strong
+  </p>
+  <p class="text-body2-strong col-span-5 m:col-span-5 l:col-span-8 xxl:col-span-9 my-xl">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat voluptatibus consequuntur, facere eum ratione,
+    tenetur ea sunt soluta aliquam mollitia in suscipit inventore temporibus? Illo dicta dolorum obcaecati dolore
+    deleniti?
+  </p>
+  <p class="text-caption col-span-3 m:col-span-3 l:col-span-4 xxl:col-span-3 my-xl">
+    Caption
+  </p>
+  <p class="text-caption col-span-5 m:col-span-5 l:col-span-8 xxl:col-span-9 my-xl">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat voluptatibus consequuntur, facere eum ratione,
+    tenetur ea sunt soluta aliquam mollitia in suscipit inventore temporibus? Illo dicta dolorum obcaecati dolore
+    deleniti?
+  </p>
+  <p class="text-caption-strong col-span-3 m:col-span-3 l:col-span-4 xxl:col-span-3 my-xl">
+    Caption Strong
+  </p>
+  <p class="text-caption-strong col-span-5 m:col-span-5 l:col-span-8 xxl:col-span-9 my-xl">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat voluptatibus consequuntur, facere eum ratione,
+    tenetur ea sunt soluta aliquam mollitia in suscipit inventore temporibus? Illo dicta dolorum obcaecati dolore
+    deleniti?
+  </p>
+  <p class="text-button col-span-3 m:col-span-3 l:col-span-4 xxl:col-span-3 my-xl">
+    Button
+  </p>
+  <p class="text-button col-span-5 m:col-span-5 l:col-span-8 xxl:col-span-9 my-xl">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat voluptatibus consequuntur, facere eum ratione,
+    tenetur ea sunt soluta aliquam mollitia in suscipit inventore temporibus? Illo dicta dolorum obcaecati dolore
+    deleniti?
+  </p>
+  <p class="text-overline col-span-3 m:col-span-3 l:col-span-4 xxl:col-span-3 my-xl">
+    Overline
+  </p>
+  <p class="text-overline col-span-5 m:col-span-5 l:col-span-8 xxl:col-span-9 my-xl">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat voluptatibus consequuntur, facere eum ratione,
+    tenetur ea sunt soluta aliquam mollitia in suscipit inventore temporibus? Illo dicta dolorum obcaecati dolore
+    deleniti?
+  </p>
 </body>
+
 </html>

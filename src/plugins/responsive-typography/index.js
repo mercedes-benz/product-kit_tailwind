@@ -116,6 +116,22 @@ const responsiveTypography = plugin(
           fontFamily: 'var(--font-application-l-subtitle1-font-family)',
         }
       },
+      '.text-subtitle1-strong': {
+        fontSize: 'var(--font-application-s-subtitle1-strong-font-size)',
+        lineHeight: 'var(--font-application-s-subtitle1-strong-line-height)',
+        letterSpacing: 'var(--font-application-s-subtitle1-strong-letter-spacing)',
+        textTransform: 'var(--font-application-s-subtitle1-strong-text-transform)',
+        fontWeight: 'var(--font-application-s-subtitle1-strong-font-weight)',
+        fontFamily: 'var(--font-application-s-subtitle1-strong-font-family)',
+        '@screen l': {
+          fontSize: 'var(--font-application-l-subtitle1-strong-font-size)',
+          lineHeight: 'var(--font-application-l-subtitle1-strong-line-height)',
+          letterSpacing: 'var(--font-application-l-subtitle1-strong-letter-spacing)',
+          textTransform: 'var(--font-application-l-subtitle1-strong-text-transform)',
+          fontWeight: 'var(--font-application-l-subtitle1-strong-font-weight)',
+          fontFamily: 'var(--font-application-l-subtitle1-strong-font-family)',
+        }
+      },
       '.text-subtitle2': {
         fontSize: 'var(--font-application-s-subtitle2-font-size)',
         lineHeight: 'var(--font-application-s-subtitle2-line-height)',
@@ -130,6 +146,22 @@ const responsiveTypography = plugin(
           textTransform: 'var(--font-application-l-subtitle2-text-transform)',
           fontWeight: 'var(--font-application-l-subtitle2-font-weight)',
           fontFamily: 'var(--font-application-l-subtitle2-font-family)',
+        }
+      },
+      '.text-subtitle2-strong': {
+        fontSize: 'var(--font-application-s-subtitle2-strong-font-size)',
+        lineHeight: 'var(--font-application-s-subtitle2-strong-line-height)',
+        letterSpacing: 'var(--font-application-s-subtitle2-strong-letter-spacing)',
+        textTransform: 'var(--font-application-s-subtitle2-strong-text-transform)',
+        fontWeight: 'var(--font-application-s-subtitle2-strong-font-weight)',
+        fontFamily: 'var(--font-application-s-subtitle2-strong-font-family)',
+        '@screen l': {
+          fontSize: 'var(--font-application-l-subtitle2-strong-font-size)',
+          lineHeight: 'var(--font-application-l-subtitle2-strong-line-height)',
+          letterSpacing: 'var(--font-application-l-subtitle2-strong-letter-spacing)',
+          textTransform: 'var(--font-application-l-subtitle2-strong-text-transform)',
+          fontWeight: 'var(--font-application-l-subtitle2-strong-font-weight)',
+          fontFamily: 'var(--font-application-l-subtitle2-strong-font-family)',
         }
       },
       '.text-body1': {
@@ -148,6 +180,22 @@ const responsiveTypography = plugin(
           fontFamily: 'var(--font-application-l-body1-font-family)',
         }
       },
+      '.text-body1-strong': {
+        fontSize: 'var(--font-application-s-body1-strong-font-size)',
+        lineHeight: 'var(--font-application-s-body1-strong-line-height)',
+        letterSpacing: 'var(--font-application-s-body1-strong-letter-spacing)',
+        textTransform: 'var(--font-application-s-body1-strong-text-transform)',
+        fontWeight: 'var(--font-application-s-body1-strong-font-weight)',
+        fontFamily: 'var(--font-application-s-body1-strong-font-family)',
+        '@screen l': {
+          fontSize: 'var(--font-application-l-body1-strong-font-size)',
+          lineHeight: 'var(--font-application-l-body1-strong-line-height)',
+          letterSpacing: 'var(--font-application-l-body1-strong-letter-spacing)',
+          textTransform: 'var(--font-application-l-body1-strong-text-transform)',
+          fontWeight: 'var(--font-application-l-body1-strong-font-weight)',
+          fontFamily: 'var(--font-application-l-body1-strong-font-family)',
+        }
+      },
       '.text-body2': {
         fontSize: 'var(--font-application-s-body2-font-size)',
         lineHeight: 'var(--font-application-s-body2-line-height)',
@@ -162,6 +210,22 @@ const responsiveTypography = plugin(
           textTransform: 'var(--font-application-l-body2-text-transform)',
           fontWeight: 'var(--font-application-l-body2-font-weight)',
           fontFamily: 'var(--font-application-l-body2-font-family)',
+        }
+      },
+      '.text-body2-strong': {
+        fontSize: 'var(--font-application-s-body2-strong-font-size)',
+        lineHeight: 'var(--font-application-s-body2-strong-line-height)',
+        letterSpacing: 'var(--font-application-s-body2-strong-letter-spacing)',
+        textTransform: 'var(--font-application-s-body2-strong-text-transform)',
+        fontWeight: 'var(--font-application-s-body2-strong-font-weight)',
+        fontFamily: 'var(--font-application-s-body2-strong-font-family)',
+        '@screen l': {
+          fontSize: 'var(--font-application-l-body2-strong-font-size)',
+          lineHeight: 'var(--font-application-l-body2-strong-line-height)',
+          letterSpacing: 'var(--font-application-l-body2-strong-letter-spacing)',
+          textTransform: 'var(--font-application-l-body2-strong-text-transform)',
+          fontWeight: 'var(--font-application-l-body2-strong-font-weight)',
+          fontFamily: 'var(--font-application-l-body2-strong-font-family)',
         }
       },
       '.text-button': {
@@ -194,6 +258,22 @@ const responsiveTypography = plugin(
           textTransform: 'var(--font-application-l-caption-text-transform)',
           fontWeight: 'var(--font-application-l-caption-font-weight)',
           fontFamily: 'var(--font-application-l-caption-font-family)',
+        }
+      },
+      '.text-caption-strong': {
+        fontSize: 'var(--font-application-s-caption-strong-font-size)',
+        lineHeight: 'var(--font-application-s-caption-strong-line-height)',
+        letterSpacing: 'var(--font-application-s-caption-strong-letter-spacing)',
+        textTransform: 'var(--font-application-s-caption-strong-text-transform)',
+        fontWeight: 'var(--font-application-s-caption-strong-font-weight)',
+        fontFamily: 'var(--font-application-s-caption-strong-font-family)',
+        '@screen l': {
+          fontSize: 'var(--font-application-l-caption-strong-font-size)',
+          lineHeight: 'var(--font-application-l-caption-strong-line-height)',
+          letterSpacing: 'var(--font-application-l-caption-strong-letter-spacing)',
+          textTransform: 'var(--font-application-l-caption-strong-text-transform)',
+          fontWeight: 'var(--font-application-l-caption-strong-font-weight)',
+          fontFamily: 'var(--font-application-l-caption-strong-font-family)',
         }
       },
       '.text-overline': {

@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## 2.1.0
+- Updated to Product Kit Core 2.1.0
+- Added new typography tokens
+
 ## 2.0.1
 - Fixed opacity tokens
 
