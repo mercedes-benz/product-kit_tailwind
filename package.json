@@ -8,6 +8,9 @@
     "test-build": "(cd test && npx tailwindcss -i ./public/assets/css/main.css -o ./dist/main.css)",
     "test-watch": "(cd test && npx tailwindcss -i ./public/assets/css/main.css -o ./dist/main.css --watch)"
   },
+  "files": [
+    "src"
+  ],
   "repository": "https://github.com/mercedes-benz/product-kit_tailwind.git",
   "bugs": "https://github.com/mercedes-benz/product-kit_tailwind/issues",
   "engines": {
