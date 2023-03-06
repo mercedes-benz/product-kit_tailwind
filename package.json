@@ -1,5 +1,5 @@
 {
-  "name": "@daimler/productkit-tailwind",
+  "name": "@mercedes-benz/productkit-tailwind",
   "version": "2.1.0",
   "description": "Product Kit Tailwind provides tailwind presets that bring design tokens of Product Kit Core to Tailwind",
   "main": "src/",
