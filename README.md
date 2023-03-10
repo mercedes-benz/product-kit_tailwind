@@ -4,6 +4,9 @@
 ![license](https://img.shields.io/badge/license-MIT-38de03e?style=flat)
 [![npm](https://img.shields.io/npm/v/@mercedes-benz/productkit-tailwind)](https://www.npmjs.com/package/@mercedes-benz/productkit-tailwind)
 
+> **Note** <br>
+> With the release of v2.2.0 and all future versions, product-kit_tailwind is available under the npm scope @mercedes-benz/productkit-tailwind.
+
 Product Kit Tailwind translates design tokens of [Product Kit Core](https://github.com/mercedes-benz/product-kit_core) in the form of a predefined tailwind.config.js which can be imported in your own Tailwind config so you can start writing frontend code without learning how to adapt to styleguide specifications.
 
 The following theme definitions have predefined values from [Product Kit Core](https://github.com/mercedes-benz/product-kit_core):
