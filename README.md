@@ -30,7 +30,7 @@ npm install -D @mercedes-benz/productkit-tailwind
 ```javascript
 module.exports = {
   presets: [
-    require('@mercedes-benz/productkit-tailwind/productkit.tailwind.config.js')
+    require('@mercedes-benz/productkit-tailwind/src/productkit.tailwind.config.js')
   ]
 ```
 
