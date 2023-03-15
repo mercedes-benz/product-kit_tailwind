@@ -37,7 +37,7 @@ module.exports = {
   ]
 ```
 
-`5.` Add additional style information to your main `styles` css
+`3.` Add additional style information to your main `styles` css
 
 ```css
 @import 'tailwindcss/base';
