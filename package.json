@@ -2,25 +2,24 @@
   "name": "@mercedes-benz/productkit-tailwind",
   "version": "2.2.0",
   "description": "Product Kit Tailwind provides tailwind presets that bring design tokens of Product Kit Core to Tailwind",
-  "main": "src/",
   "license": "MIT",
+  "repository": "https://github.com/mercedes-benz/product-kit_tailwind.git",
+  "bugs": "https://github.com/mercedes-benz/product-kit_tailwind/issues",
+  "files": [
+    "src"
+  ],
   "scripts": {
     "test-build": "(cd test && npx tailwindcss -i ./public/assets/css/main.css -o ./dist/main.css)",
     "test-watch": "(cd test && npx tailwindcss -i ./public/assets/css/main.css -o ./dist/main.css --watch)"
   },
-  "files": [
-    "src"
-  ],
-  "repository": "https://github.com/mercedes-benz/product-kit_tailwind.git",
-  "bugs": "https://github.com/mercedes-benz/product-kit_tailwind/issues",
-  "engines": {
-    "node": "16.x"
+  "dependencies": {
+    "@mercedes-benz/productkit-core": "^2.2.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.13",
     "tailwindcss": "^3.2.1"
   },
-  "dependencies": {
-    "@mercedes-benz/productkit-core": "^2.2.0"
+  "engines": {
+    "node": "16.x"
   }
 }
