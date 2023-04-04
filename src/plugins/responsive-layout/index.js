@@ -1,5 +1,4 @@
 // SPDX-License-Identifier: MIT
-const autoprefixer = require('autoprefixer');
 const plugin = require('tailwindcss/plugin')
 
 const responsiveLayout = plugin(
