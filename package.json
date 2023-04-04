@@ -13,7 +13,7 @@
     "test-watch": "(cd test && npx tailwindcss -i ./public/assets/css/main.css -o ./dist/main.css --watch)"
   },
   "dependencies": {
-    "@mercedes-benz/productkit-core": "^2.2.0"
+    "@mercedes-benz/productkit-core": "^2.2.1"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.13",
