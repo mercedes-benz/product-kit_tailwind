@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 ## [2.2.0]
 
 ### Changed
-- Update to Product Kit Core 2.2.0
+- Update to Product Kit Core 2.2.1
 
 ## [2.1.0]
 
