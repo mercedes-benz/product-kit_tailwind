@@ -2,7 +2,10 @@
 # ![Product Kit Tailwind Logo](./docs/images/pk_tailwind_title_image.png)
 
 ![license](https://img.shields.io/badge/license-MIT-38de03e?style=flat)
-[![npm](https://img.shields.io/npm/v/@daimler/productkit-tailwind)](https://www.npmjs.com/package/@daimler/productkit-tailwind)
+[![npm](https://img.shields.io/npm/v/@mercedes-benz/productkit-tailwind)](https://www.npmjs.com/package/@mercedes-benz/productkit-tailwind)
+
+> **Note** <br>
+> With the release of v2.2.0 and all future versions, product-kit_tailwind is available under the npm scope @mercedes-benz/productkit-tailwind.
 
 Product Kit Tailwind translates design tokens of [Product Kit Core](https://github.com/mercedes-benz/product-kit_core) in the form of a predefined tailwind.config.js which can be imported in your own Tailwind config so you can start writing frontend code without learning how to adapt to styleguide specifications.
 
@@ -22,7 +25,7 @@ The following theme definitions have predefined values from [Product Kit Core](h
 `1.` Add Product Kit Tailwind as a dependency through npm:
 
 ```bash
-npm install -D @daimler/productkit-tailwind
+npm install -D @mercedes-benz/productkit-tailwind
 ```
 
 `2.` Import Product Kit Tailwind to your tailwind.config.js like so:
@@ -30,15 +33,15 @@ npm install -D @daimler/productkit-tailwind
 ```javascript
 module.exports = {
   presets: [
-    require('@daimler/productkit-tailwind/productkit.tailwind.config.js')
+    require('@mercedes-benz/productkit-tailwind/src/productkit.tailwind.config.js')
   ]
 ```
 
-`5.` Add additional style information to your main `styles` css
+`3.` Add additional style information to your main `styles` css
 
 ```css
 @import 'tailwindcss/base';
-@import '@daimler/productkit-tailwind/src/styles.css';
+@import '@mercedes-benz/productkit-tailwind/src/styles.css';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 ```
